@@ -1,0 +1,7 @@
+###GET data
+GET https://639b3492d5141501974eaf28.mockapi.io/products
+
+###
+GET https://fakestoreapi.com/products
+###
+GET https://63983bee044fa481d695bb12.mockapi.io/products
