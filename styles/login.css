@@ -1,0 +1,42 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: antiquewhite; */
+    background-image: url(https://cdn.pixabay.com/photo/2017/02/08/17/24/fantasy-2049567__340.jpg);
+ }
+ #login,#signup{
+     height: 400px;
+     width: 300px;
+     background-color: rgba(4, 4, 7, 0.5);
+     /* background-color: black; */
+     margin: auto;
+     font-family: sans-serif;
+     font-weight: 600;
+     padding: 25px 15px;
+     background-image: url(https://c4.wallpaperflare.com/wallpaper/213/73/152/cup-coffee-beverage-tea-wallpaper-preview.jpg);
+     color: cyan;
+ }
+ #submit,h3,#signSubmit {
+     display: flex;
+     margin: auto;
+     background-color: #18FFFF;
+     /* margin: 10px ; */
+     justify-content: center;
+     align-items: center;
+     color: black;
+ }
+ #submit{
+     width: 70px;
+     font-weight: 500;
+ }
+ #alert{
+     color: red;
+ }
+ #signSubmit{
+     margin-top: 10px;
+ }
+ #signup+h3{
+     margin-top: 25px;
+ }
