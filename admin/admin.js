@@ -8,6 +8,7 @@ navbarr.innerHTML = `
 <div>
     <button id="removeProducts">Remove Product</button>
     <button id="addProducts">Add Product</button>
+    <button id="editProducts">Edit Product</button>
 </div>
 `;
 let removeProductsButton = document.getElementById("removeProducts");
@@ -59,7 +60,7 @@ function card(cat, details, id, image, name, price, quantity, ratings) {
             </div>
             <div class="card-body">
                 <h3 class="name">${name.substring(0, 25)}</h3>
-                <div class="description">${details.substring(0,33)}</div>
+                <div class="description">${details.substring(0,32)}</div>
                 <h3 class="rating">Rating: ${ratings}</h3>
                 <h3 class='price'>Price: ${price}</h3>
                 <h3 class="quantity">Quantity: ${quantity}</h3>
