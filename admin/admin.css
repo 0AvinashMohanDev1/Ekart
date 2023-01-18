@@ -1,0 +1,67 @@
+#mainContainer{
+    width: 100%;
+    background-color: #d0d2d3;
+    /* border: 5px solid green; */
+}
+
+#main{
+    width:95%;    
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 32px;   
+    margin: auto;
+    /* border: 3px solid blue;    */
+    text-align: center;
+    
+}
+#main form{
+    margin-left: 170%;
+}
+
+.card{
+    /* border: 1px solid red; */
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* background-image: url('https://images.unsplash.com/photo-1557683304-673a23048d34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YmFja2dyb3VuZHxlbnwwfDF8MHx8&auto=format&fit=crop&w=600&q=60'); */
+}
+
+.card-img img{
+    width: 183px;
+    height: 200px;
+}
+
+
+.name{
+    margin-bottom: 0px;
+}
+.rating,.price{
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+/* .price{
+    margin-top: 5px;
+    margin-bottom: 0px;
+} */
+.quantity{
+    margin-top: 5px;
+}
+#navbar{
+    height: 50px;
+    justify-content: space-around;
+    display: flex;
+    background-color: #ff609d;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+
+
+#addForm{
+    margin: center; 
+    width:250px;
+    /* border: 1px solid blueviolet; */
+
+}
