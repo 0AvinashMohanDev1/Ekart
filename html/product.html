@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+   <style>
+    #body{
+        display: flex;
+        width: 80%;
+        height: auto;
+        margin: auto;
+        justify-content: space-between;
+
+    }
+    #list{
+        width: 50%;
+        border: 2px solid red;
+        margin-right: 20px;
+    }
+    #sortPrice{
+        width: 100%;
+        height: 50px;
+        border: 2px solid black;
+        font-size: x-large;
+        background-color: rgb(255, 0, 55);
+        color: aliceblue;
+    }
+    #products{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin: auto;
+        gap: 10px;
+    }
+    #products>div{
+        gap: 10px;
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 10px;
+    }
+    #products button{
+        width: 200px;
+        height: 50px;
+        display: flex;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        color: aliceblue;
+        background-color: black;
+        gap: 10px;
+        margin-bottom: 20px;
+        border-radius: 40px;
+        justify-content: center;
+    }
+    #products button:hover{
+    background-color: rgb(255, 134, 134);
+    transform: scale(1.2);
+    }
+   </style>
+</head>
+<body>
+    <div id="body">
+        <div id="list">
+            <select id="sortPrice">
+                <option value="">Sort By Price</option>
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+              </select>
+              <select id="sortcategory">
+                <option value="">Sort By Price</option>
+                <option value="asc">Cosmetics</option>
+                <option value="desc">Descending</option>
+              </select>
+        </div>
+        <div id="products">
+
+        </div>
+    </div>
+</body>
+<script>
+    let arr;
+    let url =`https://639b3492d5141501974eaf28.mockapi.io/nykaa`
+     fetch(url).then((res)=>{
+        return res.json();
+    }).then((data)=>{
+        hotDisplay(data);
+        //console.log(data);
+        arr=data;
+    }).catch((err)=>{
+        alert(err)
+    })
+    function hotDisplay(data){
+        document.querySelector("#products").innerHTML=null;
+        data.forEach(element => {
+            let div = document.createElement("div");
+            let img = document.createElement("img");
+            img.setAttribute("src",element.image);
+            let name= document.createElement("h2")
+            name.innerText=element.name;
+            let price= document.createElement("h3")
+            price.innerText="₹"+ element.price;
+            let details= document.createElement("h6")
+            details.innerText=element.details;
+            // let bus= src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg"
+            
+            let addToCard = document.createElement("button")
+            addToCard.innerHTML="Add To Card";
+            addToCard.addEventListener("click",()=>{
+    
+              let cardData = JSON.parse(localStorage.getItem("card"))
+              if(cardData===null)      cardData=[]
+              //for singel products
+              let isAllReadyCard=false
+              for(let i=0;i<cardData.length;i++){
+                if(cardData[i].id === element.id){
+                  isAllReadyCard=true;
+                  break;
+                }
+              }
+              if(isAllReadyCard===true){
+                alert("Product Already in Cart")
+              }else{
+                cardData.push({...element,quantity:1 })
+              localStorage.setItem("card",JSON.stringify(cardData))
+              alert("Product Added To Cart")
+              }
+              
+            })
+
+            div.append(img,name,price,details,addToCard);
+            document.querySelector("#products").append(div);
+        });
+    }
+
+
+    document.querySelector("#sortPrice").addEventListener("change",()=>{
+    let value = document.querySelector("#sortPrice").value;
+    console.log(value);
+    if(value === "asc"){
+        arr.sort((a,b)=>{
+            return a.price - b.price;
+        })
+        console.log("ratna");
+        console.log(arr);
+        hotDisplay(arr);
+    }
+    if(value === "desc"){
+        arr.sort((a,b)=>{
+            return b.price - a.price;
+        })
+        hotDisplay(arr);
+    }
+})
+</script>
+</html>
