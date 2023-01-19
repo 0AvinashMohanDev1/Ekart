@@ -1,0 +1,11 @@
+#conteinar{
+    display: flex;
+justify-content: space-between;}
+.profile{
+width: 40%;
+background-color: aqua;
+}
+.edit{
+    width: 50%;
+    background-color: beige;
+}
