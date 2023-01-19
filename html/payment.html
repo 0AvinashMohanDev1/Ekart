@@ -1,158 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Payment</title>
-    <link rel="stylesheet" href="/styles/payment.css">
-    <style>
-        *{padding:0; margin:0; box-sizing: border-box; font-family:sans-serif;}
-header{
-	width: 100vw;
-	min-height: 100vh;
-	
-	font-size: 1.2rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.container{
-	background: white;
-	max-width: 800px;
-	min-height: 500px;
-	display: flex;
-	justify-content:space-between;
-	align-items: flex-start;
-	padding: 0.5rem 1.5rem;
-}
-.left{
-	flex-basis: 50%;
-}
-.right{
-	flex-basis: 50%;
-}
-form{
-	padding: 1rem;
-}
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
-h3{
-	margin-top: 1rem;
-	color:#2c3e50;
-	}
-
-form input[type="text"]{
-	width: 100%;
-	padding: 0.5rem 0.7rem;
-	margin: 0.5rem 0;
-	outline: none;
-}
-
-#zip{
-	display: flex;
-	margin-top: 0.5rem;
-}
-#zip select{
-	padding: 0.5rem 0.7rem;
-}
-#zip input[type="number"]{
-	padding: 0.5rem 0.7rem;
-	margin-left: 5px;	
-}
-input[type="submit"]{
-	width: 100%;
-	padding: 0.7rem 1.5rem;
-	background: #f7433d;
-	color: white;
-	border: none;
-	outline: none;
-	margin-top: 1rem;
-	cursor: pointer;
-}
-
-input[type="submit"]:hover{
-	background: #2c3e50;
-}
-
-
-
-    </style>
+  <link rel="stylesheet" href="/styles/payment.css">
 </head>
 <body>
-<header>
-	<div class="container">
-		<div class="left">
-			<h3>BILLING ADDRESS</h3>
-			<form>
-				Full name
-				<input type="text" name="" placeholder="Enter name">
-				Email
-				<input type="text" name="" placeholder="Enter email">
+  <div class="nav shadow-sm">
+    <div class="logo p-4 text-center">
+    </div>
 
-				Address
-				<input type="text" name="" placeholder="Enter address">
-				
-				City
-				<input type="text" name="" placeholder="Enter City">
-				<div id="zip">
-					<label>
-						State
-						<select>
-							<option>Choose State..</option>
-							<option>Rajasthan</option>
-							<option>Hariyana</option>
-							<option>Uttar Pradesh</option>
-							<option>Madhya Pradesh</option>
-                            <option>West Bengal</option>
-						</select>
-					</label>
-						<label>
-						Zip code
-						<input type="number" name="" placeholder="Zip code">
-					</label>
-				</div>
-			</form>
-		</div>
-		<div class="right">
-			<h3>PAYMENT</h3>
-			<form>
-				Accepted Card <br>
-				<img src="/photos/card1.png" width="100">
-				<img src="/photos/card2.png" width="50">
-				<br><br>
+    <div class="option">
+      <div class="line"></div>
+      <div class="login ps-3 pt-3">
+        <p class="mb-0 ms-0">1 - LOGIN</p>
+        <!-- <p </p> -->
+      </div>
+      <div class="line"></div>
+      <div id="add" class="address pt-4 ps-3">
+        <p class="ms-0">2 - ADDRESS</p>
+      </div>
+      <div class="line"></div>
+      <div class="payment pt-4 ps-3">
+        <p class="ms-0">3 - PAYMENT</p>
+      </div>
+      <div class="line2"></div>
+    </div>
+  </div>
 
-				Credit card number
-			<input type="text" name="" placeholder="Enter card number" required>
-				
-				Exp month
-				<input type="text" name="" placeholder="Enter Month" required>
-				<div id="zip">
-					<label>
-						Exp year
-						<select required>
-							<option>Choose Year..</option>
-							<option>2022</option>
-							<option>2023</option>
-							<option>2024</option>
-							<option>2025</option>
-						</select>
-					</label>
-						<label>
-						CVV
-						<input type="password" name="" placeholder="CVV" re>
-					</label>
-				</div>
-			</form>
-			<input onclick="openpopup()" type="submit" name="" value="Proceed to Checkout">
-		</div>
-	</div>
-</header>
+  <div class="SUggestion">
+    <span class="cir">◉ </span>&nbsp; Please use a digital payment method & help us ensure contactless delivery for your
+    safety
+  </div>
+
+  <div class="contain mt-4 d-flex">
+    <div class="paymentmode">
+      <h6 class="ms-3 mt-3 mb-0 ">CHOOSE PAYMENT METHOD</h6>
+      <ul class="list-group list mt-2">
+        <li class="list-group-item" id="cd">Credit/Debit Card</li>
+        <li class="list-group-item">UPI</li>
+        <li class="list-group-item">GooglePay</li>
+        <li class="list-group-item">Net Banking</li>
+        <li class="list-group-item">Mobile Wallets</li>
+        <li class="list-group-item">Cash on Delivery</li>
+        <li class="list-group-item">Mobile Wallets</li>
+      </ul>
+    </div>
+
+    <div class="addresstake bg-body shadow-sm  ">
+     <div id="chnage">
+       <p class="ms-3 mt-3">Credit/Debit Card</p>
+      <div class="hor">
+
+      </div>
+      <label for="card number" class="ms-3 mt-3">Card Number</label><br>
+
+      <input type="text" id="cardnumber" class="mt-1 ms-3" required autocomplete="off">
+      <div class="hor mt-1">
+
+      </div>
+      <label for="expiry" class="ms-3 mt-3">Expiry</label><br>
+
+      <select id="month" class="mt-2 ms-3">
+        <option>Choose Year..</option>
+        <option>2022</option>
+        <option>2023</option>
+        <option>2024</option>
+        <option>2025</option>
+      </select>
+        
+      <input type="password" id="cvv" class="mt-2 ms-3" placeholder="CVV" required autocomplete="off">
+      <div class="img-fluid d-inline-block ms-2">
+      </div>
+      <div class="cont d-inline-block ms-2">
+        <p class="pt-2 ">Last 3 Digits at the back of the Card</p>
+      </div>
+      <div class="che ms-3 mt-1">
+        <div class="mt-1"> <input type="checkbox" checked class="largerCheckbox"></div>
+
+        <div class="text"> Save this card for Future</div>
+        
+      </div>
+      <button class="ms-3 mt-3 mb-5" id="final_payment_text">
+          Pay Now
+        </button>
+        
+     </div>
+     
+    </div>
+  </div>
 </body>
-</html>
-<!-- <script src="./btn.js"></script> -->
 <script>
-
-    function openpopup(){
-        window.location.href="order.html"
+  document.querySelector("#add").addEventListener("click",function(){
+    window.location.href="adress.html"
+  })
+  
+  
+  document.querySelector("#final_payment_text").addEventListener("click",function(){
+    let cardnumber=document.querySelector("#cardnumber").value;
+  let date=document.querySelector("#month").value;
+  let cvv=document.querySelector("#cvv").value;
+    if(cardnumber!==""&&date!==""&&cvv!==""){
+      window.location.href="order.html"
+    }else{
+      alert("Fill all credential")
     }
-
+  })
 </script>
+</html>
