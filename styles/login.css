@@ -3,28 +3,36 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: antiquewhite; */
-    background-image: url(https://cdn.pixabay.com/photo/2017/02/08/17/24/fantasy-2049567__340.jpg);
+    background-color: antiquewhite;
+    /* background-image: url(https://static.vecteezy.com/system/resources/thumbnails/008/058/794/small/elegant-abstract-pink-background-with-thin-wavy-lines-vector.jpg); */
+    /* background-image: url(https://img.freepik.com/free-vector/watercolor-sugar-cotton-clouds-background_52683-80661.jpg?w=2000); */
+    /* background-image: url(https://cdn.mwallpapers.com/photos/celebrities/colors/pink-background-android-iphone-desktop-hd-backgrounds-wallpapers-1080p-4khd-wallpapers-desktop-background-android-iphone-1080p-4k-xyval.jpg); */
+   
  }
  #login,#signup{
      height: 400px;
      width: 300px;
-     background-color: rgba(4, 4, 7, 0.5);
+     background-color: rgba(255, 255, 255, 0.5);
      /* background-color: black; */
      margin: auto;
      font-family: sans-serif;
      font-weight: 600;
      padding: 25px 15px;
-     background-image: url(https://c4.wallpaperflare.com/wallpaper/213/73/152/cup-coffee-beverage-tea-wallpaper-preview.jpg);
-     color: cyan;
+     /* background-image: url(https://c4.wallpaperflare.com/wallpaper/213/73/152/cup-coffee-beverage-tea-wallpaper-preview.jpg); */
+     /* background-image: url(https://c4.wallpaperflare.com/wallpaper/944/181/272/flowers-branches-background-pink-wallpaper-preview.jpg); */
+     /* background-image: url(https://www.nykaa.com/beauty-blog/wp-content/uploads/2022/07/Nykaa-Cross-Border-Store-Turns-1_bb329.jpg); */
+     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnfLC1JpYlgT-19jVTLiVkrSPixtAcE_BZtO8mUAZsNIuUVQQR16aNm1fouy3l12aSBhc&usqp=CAU);
+     color: rgb(156, 0, 180);
  }
  #submit,h3,#signSubmit {
      display: flex;
      margin: auto;
-     background-color: #18FFFF;
+     background-color: #ffffff;
      /* margin: 10px ; */
      justify-content: center;
      align-items: center;
+     font-size: larger;
+     /* line-height: 2px; */
      color: black;
  }
  #submit{
