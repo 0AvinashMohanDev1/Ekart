@@ -23,7 +23,7 @@ window.addEventListener("load", (event) => {
     <h2>Users : </h2>  
   
     <img src="/photos/sales.png" alt="sales logo">
-      <h2>Users : </h2>
+      <h2>Sales : </h2>
   </div>
  
   `;
@@ -71,23 +71,30 @@ function renderList(data) {
   // console.log(allbtn);
 
   let allCards = document.querySelectorAll(".card");
-  console.log(allCards);
-var clickedId;
-for(let i=0;i<allCards.length;i++){
-  
-  allCards[i].lastElementChild.lastElementChild.addEventListener('click',()=>{
-    console.log(allCards[i].dataset.id);
-    clickedId=allCards[i].dataset.id;
-    console.log(clickedId)
-    // console.log(`${allCards[i].childNodes}`)
-  })
-  
-}
-
-for(let i=0;i<allCards.length;i++){
- 
-}
-  
+  // console.log(allCards);
+  var clickedId;
+  for (let i = 0; i < allCards.length; i++) {
+    allCards[i].lastElementChild.lastElementChild.addEventListener(
+      "click",
+      () => {
+        // console.log(allCards[i].dataset.id);
+        clickedId = allCards[i].dataset.id;
+        console.log(clickedId);
+        // console.log(`${allCards[i].childNodes}`)
+        fetch(`${url}/${clickedId}`, {
+          method: "DELETE",
+          headers: {
+            "Content-type": "application/json",
+          },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            fetchAndRenderAll()
+          });
+      }
+    );
+  }
 }
 
 function card(cat, details, id, image, name, price, quantity, ratings) {
@@ -123,7 +130,7 @@ function addProductForm() {
     <label for="category">Product Category : </label><br>
     <input type="text" id="category" required><br>
     <label for="price">Product Price : </label><br>
-    <input type="text" id="price" required><br>
+    <input type="number" id="price" required><br>
     <label for="details">Product Details : </label><br>
     <input type="text" id="details" required><br>
     <label for="ratings">Product Ratings: </label><br>
@@ -170,12 +177,16 @@ function addProductToAPI(obj) {
     body: JSON.stringify(obj),
   })
     .then((res) => res.json())
-    .then((data) => console.log(data))
+    .then((data) => {
+      console.log(data);
+      addProductForm()
+    })
     .catch((err) => alert("error"));
 }
 
 //-------------------------------------------------------//
 // edit
+let editProducts=document.getElementById('editProducts');
 editProducts.addEventListener("click", () => {
   editProduct();
 });
@@ -190,7 +201,7 @@ function editProduct() {
     <label for="category">Product Category : </label><br>
     <input type="text" id="category" required><br>
     <label for="price">Product Price : </label><br>
-    <input type="text" id="price" required><br>
+    <input type="number" id="price" required><br>
     <label for="details">Product Details : </label><br>
     <input type="text" id="details" required><br>
     <label for="ratings">Product Ratings: </label><br>
@@ -239,25 +250,10 @@ function editProductFromAPI(obj, id) {
     body: JSON.stringify(obj),
   })
     .then((res) => res.json())
-    .then((data) => console.log(data))
+    .then((data) => {
+      console.log(data)
+      editProduct();
+    })
     .catch((err) => alert("error"));
 }
 
-
-
-// allCards.forEach((e) => {
-  //   console.log(e.button);
-  //   allCards.addEventListener("click", (e) => {
-  //     console.log(e);
-  //   });
-  // });
-
-  // for(let i in addCards){
-  //   if(i==0){
-  //     console.log(addCards[i])
-  //   }
-  // }
-
-  // rembtn.attributes.addEventListener("click",()=>{
-  //     console.log("arun");
-  //   })

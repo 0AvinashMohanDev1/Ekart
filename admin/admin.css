@@ -3,7 +3,7 @@
     background-color: #C7C0F0;
     /* border: 5px solid green; */
     border-radius: 50px;
-    background-image: url(https://png.pngtree.com/background/20210709/original/pngtree-water-wave-light-simple-fashion-cosmetics-banner-poster-background-picture-image_944394.jpg);
+    background-image: url(https://images.unsplash.com/photo-1508615039623-a25605d2b022?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGJhY2tncm91bmQlMjBpbWFnZSUyMGZvciUyMHByb2R1Y3RzfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=600&q=60);
 }
 
 #main{
@@ -97,3 +97,7 @@
     border:1px solid red;
 }
 
+#dashboard img{
+    width: 100px;
+    border-radius: 30px;
+}
