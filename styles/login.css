@@ -4,10 +4,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: antiquewhite;
-    /* background-image: url(https://static.vecteezy.com/system/resources/thumbnails/008/058/794/small/elegant-abstract-pink-background-with-thin-wavy-lines-vector.jpg); */
-    /* background-image: url(https://img.freepik.com/free-vector/watercolor-sugar-cotton-clouds-background_52683-80661.jpg?w=2000); */
-    /* background-image: url(https://cdn.mwallpapers.com/photos/celebrities/colors/pink-background-android-iphone-desktop-hd-backgrounds-wallpapers-1080p-4khd-wallpapers-desktop-background-android-iphone-1080p-4k-xyval.jpg); */
-   
+    background-image: url(https://thumbs.dreamstime.com/b/abstract-autumn-background-beautiful-leaves-texture-34325133.jpg);
  }
  #login,#signup{
      height: 400px;
@@ -18,11 +15,10 @@ body{
      font-family: sans-serif;
      font-weight: 600;
      padding: 25px 15px;
-     /* background-image: url(https://c4.wallpaperflare.com/wallpaper/213/73/152/cup-coffee-beverage-tea-wallpaper-preview.jpg); */
-     /* background-image: url(https://c4.wallpaperflare.com/wallpaper/944/181/272/flowers-branches-background-pink-wallpaper-preview.jpg); */
-     /* background-image: url(https://www.nykaa.com/beauty-blog/wp-content/uploads/2022/07/Nykaa-Cross-Border-Store-Turns-1_bb329.jpg); */
-     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnfLC1JpYlgT-19jVTLiVkrSPixtAcE_BZtO8mUAZsNIuUVQQR16aNm1fouy3l12aSBhc&usqp=CAU);
+     border-radius: 40px;
+     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVyxRs-h0nc8s5H-WQp77bKk33r0rOpvO7Pw&usqp=CAU);
      color: rgb(156, 0, 180);
+     /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
  }
  #submit,h3,#signSubmit {
      display: flex;
@@ -34,10 +30,12 @@ body{
      font-size: larger;
      /* line-height: 2px; */
      color: black;
+     border-radius: 10px;
  }
- #submit{
+ #submit,#signSubmit{
      width: 70px;
      font-weight: 500;
+     border: 0px;
  }
  #alert{
      color: red;

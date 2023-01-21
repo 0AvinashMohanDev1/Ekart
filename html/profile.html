@@ -8,23 +8,43 @@
     <link rel="stylesheet" href="/styles/profile.css">
 </head>
 <body>
+    <a href="/html/login.html">login</a>
     <div id="conteinar">
         <div class="profile">
-            <form action="">
                 <label for="name">Name:</label><br>
-                <input type="'text'"><br>
+                <!-- <button id="edit">edit</button><br> -->
+                <h3 class="name" id="name">please login first</h3>
                 <label for="email">E-mail:</label><br>
-                <input type="'text'"><br>
+                <h3 class="name" id="email">please login first</h3>
                 <label for="phone">phone:</label><br>
-                <input type="'number'"><br>
+                <h3 class="name" id="phone">please login first</h3>
                 <label for="age">age:</label><br>
-                <input type="'number'"><br>
+                <h3 class="name" id="age">please login first</h3>
                 <label for="gender">Gender:</label><br>
-                <input type="'text'"><br>
+                <h3 class="name" id="gender">please login first</h3>
+                <button id="logout">log out</button>
+                <button>edit</button>
+        </div>
+        <div class="edit">
+            <h2>You can edit here</h2>
+            <form action="" id="editForm" class="profile">
+                <label for="editName">Name:</label>
+                <input type="text" name="editName" id="editName">
+                <label for="editEmail">Email:</label>
+                <input type="email" name="editEmail" id="editEmail">
+                <label for="editPhone">Phone:</label>
+                <input type="number" name="editPhone" id="editPhone">
+                <label for="editAge">Age:</label>
+                <input type="number" name="editAge" id="editAge">
+                <label for="editGender">Gender:</label>
+                <input type="text" name="editGender" id="editGender">
+                <input type="submit" value="submit" id="submit">
+                <button>edit</button>
             </form>
         </div>
-        <div class="edit">I am Here</div>
-        <div>now let's see</div>
+        <div>
+            <a href="/html/cart.html">cart_🛒</a>
+        </div>
     </div>
 </body>
 </html>
