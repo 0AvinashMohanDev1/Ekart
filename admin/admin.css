@@ -1,7 +1,9 @@
 #mainContainer{
     width: 100%;
-    background-color: #d0d2d3;
+    background-color: #C7C0F0;
     /* border: 5px solid green; */
+    border-radius: 50px;
+    background-image: url(https://png.pngtree.com/background/20210709/original/pngtree-water-wave-light-simple-fashion-cosmetics-banner-poster-background-picture-image_944394.jpg);
 }
 
 #main{
@@ -13,7 +15,6 @@
     margin: auto;
     /* border: 3px solid blue;    */
     text-align: center;
-    
 }
 #main form{
     margin-left: 170%;
@@ -25,12 +26,14 @@
     text-align: center;
     background-color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
     /* background-image: url('https://images.unsplash.com/photo-1557683304-673a23048d34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YmFja2dyb3VuZHxlbnwwfDF8MHx8&auto=format&fit=crop&w=600&q=60'); */
 }
 
 .card-img img{
     width: 183px;
     height: 200px;
+    border-radius: 10px;
 }
 
 
@@ -49,15 +52,33 @@
     margin-top: 5px;
 }
 #navbar{
-    height: 50px;
+    height: 80px;
     justify-content: space-around;
     display: flex;
-    background-color: #ff609d;
     align-items: center;
     margin-bottom: 20px;
-    
+    border-radius: 50px;
+    background-image: url(https://png.pngtree.com/background/20210709/original/pngtree-dark-blue-galaxy-starry-background-material-picture-image_321659.jpg);
 }
 
+#navbar div{
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(3,1fr);
+    gap: 100px;
+   
+}
+#navbar button{
+    width: 200px;
+    height: 40px;
+    border: 0px;
+    background-color:#ffc765;
+    border-radius: 10px;
+}
+
+#removeProducts,#addProducts,#editProducts{
+    font-weight:900;
+}
 
 #addForm{
     margin: center; 
@@ -65,3 +86,14 @@
     /* border: 1px solid blueviolet; */
 
 }
+
+#addForm{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#dashboard{
+    border:1px solid red;
+}
+

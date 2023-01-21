@@ -1,13 +1,16 @@
 
-.navbar-1{
-    display: flex;
+.navbar-1-2{
     position: sticky;
     top: 0;
+}
+.navbar-1{
+    display: flex;
     justify-content: space-between;
     height: 5vh;
     background-image: url('https://adn-static1.nykaa.com/media/wysiwyg/2021/common-strip.jpg');
     background-size: cover;
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 #left{
     align-items: center;
@@ -34,18 +37,19 @@
     font-size: 15px;
 }
 #right > button:hover{
-    color: white;
+    color: rgb(241, 240, 240);
+    transition: all ease-in-out 220ms;
+    cursor: pointer;
 }
 
 .navbar-2{
     display: flex;
-    position: sticky;
-    top: 0;
     height: 7vh;
     border-bottom: 1px solid rgb(196, 195, 195);
-    border-radius: 10px;
     padding-top: 7px;
-    background-color: #f9f8f8
+    background-color: #f9f8f8;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
 }
 .navbar-2 a{
     text-decoration: none;
@@ -56,6 +60,8 @@
 }
 .navbar-2 a:hover{
     color: rgb(246, 84, 111);
+    transition: all ease-in-out 220ms;
+    cursor: pointer;
 }
 #left1{
     display: flex;
@@ -83,6 +89,7 @@
     height: 5vh;
     background-color: rgb(220, 219, 219);
     border-radius: 10px;
+    margin-right: 20px;
 }
 #search input{
     border: none;
@@ -90,7 +97,7 @@
     border-radius: 10px;
 }
 ::placeholder{
-    color: rgb(132, 131, 131);
+    color: rgb(255, 255, 255);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 #search button{
@@ -110,6 +117,8 @@
 }
 #Signin-btn:hover{
     background: radial-gradient(circle, rgb(179, 51, 73) 0%, rgb(232, 114, 134) 100%);
+    transition: all ease-in-out 220ms;
+    cursor: pointer;
 }
 #bag{
     width: 40px;
@@ -126,6 +135,7 @@
     margin: auto;
     display: grid;
     grid-template-columns: repeat(12,1fr);
+    gap: 40px;
 }
 .navbar-3 a{
     text-decoration: none;
@@ -136,6 +146,8 @@
 .navbar-3 a:hover{
     color: rgb(249, 89, 116);
     text-decoration: underline;
+    transition: all ease-in-out 220ms;
+    cursor: pointer;
 }
 .container-1 img{
     width: 100%;
@@ -283,4 +295,118 @@
 }
 .container-9 img{
     border-radius: 10px;
+}
+.Shop-All-Footer{
+    width: 47%;
+    margin: auto;
+    margin-top: 80px;
+}
+.Shop-All-Footer img{
+    width: 100%;
+}
+.color-div{
+    background-color: rgb(226, 224, 224);
+    width: 100%;
+    height: 6vh;
+    margin-top: 60px;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}
+.Footer-1{
+    width: 100%;
+    background-color: #3f414d;
+    height: 20vh;
+}
+.Footer-1-1{
+    width: 70%;
+    margin: auto;
+    color: rgb(236, 234, 234);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 65px;
+    padding-top: 26px;
+}
+#Send-Email{
+    display: flex;
+    width: 25%;
+}
+#Send-Email input{
+    border: none;
+    border-bottom: 1.5px solid rgb(236, 234, 234);
+    background-color: transparent;
+    color: rgb(236, 234, 234);
+    margin-right: 5px;
+}
+::placeholder{
+    color: rgb(236, 234, 234);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#Send-Email button{
+    border: 1.5px solid rgb(236, 234, 234);
+    height: 4vh;
+    border-radius: 4px;
+    width: 90px;
+    background-color: transparent;
+    color: rgb(236, 234, 234);
+}
+.Footer-2{
+    background-color: #8c8d94;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.Footer-2-1{
+    width: 75%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+.Footer-2-1 h5{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+.Footer-2-1 p{
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+.Footer-2-1 p:hover{
+    color: rgb(249, 89, 116);
+    transition: all ease-in-out 220ms;
+    cursor: pointer;
+}
+.Footer-2-1 img{
+    width: 25%;
+}
+.Footer-3{
+    background-color: rgb(234, 231, 231);
+    padding-top: 40px;
+    padding-bottom: 35px;
+}
+.Footer-3-1{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.Footer-3-1 h5{
+    color: rgb(56, 54, 54);
+    font-size: 14px;
+}
+.Footer-3-1 p{
+    color: rgb(52, 50, 50);
+    font-size: 12px;
+}
+.Footer-3-cards img{
+    margin-right: 20px;
+    padding-top: 30px;
+}
+.flex{
+    display: flex;
+}
+.social-media{
+    width: 75%;
+    margin: auto;
+    display: flex;
+    padding-top: 0;
 }
