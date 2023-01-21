@@ -3,7 +3,7 @@
     background-color: #C7C0F0;
     /* border: 5px solid green; */
     border-radius: 50px;
-    background-image: url(https://png.pngtree.com/background/20210709/original/pngtree-water-wave-light-simple-fashion-cosmetics-banner-poster-background-picture-image_944394.jpg);
+    background-image: url(https://images.unsplash.com/photo-1508615039623-a25605d2b022?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGJhY2tncm91bmQlMjBpbWFnZSUyMGZvciUyMHByb2R1Y3RzfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=600&q=60);
 }
 
 #main{
@@ -93,7 +93,92 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-#dashboard{
-    border:1px solid red;
+#heading{
+    /* border: 1px solid blue; */
+    width: 1200px;
 }
 
+#first{
+    display: flex;
+    margin: 70px;
+    /* border: 1px solid red; */
+    align-items:flex-end;
+}
+#first h2,#second h2{
+    margin-left:100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#first img,#second img{
+    width: 100px;
+}
+#second{
+    display: flex;
+    margin: 70px;
+    align-items: flex-end;
+}
+
+@media only screen and (max-width: 900px) {
+    #heading{
+        /* border: 1px solid blue; */
+        width: 800px;
+    }
+    #navbar div{
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(3,1fr);
+       gap: 1px;       
+    }
+    #main{
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+    
+
+}
+@media only screen and (max-width: 650px) {
+    #navbar{
+        height: 160px;
+        justify-content: space-around;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        border-radius: 50px;
+        background-image: url(https://png.pngtree.com/background/20210709/original/pngtree-dark-blue-galaxy-starry-background-material-picture-image_321659.jpg);
+    }
+    #navbar div{
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(1,1fr);
+        gap: 1px;       
+    }
+    #heading{
+        /* border: 1px solid blue; */
+        width: 150%;
+    }
+    #first img,#second img{
+        display: none;
+    }
+    #first h2,#second h2{
+        margin-left:0px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #main{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media only screen and (max-width: 450px){
+    #heading{
+        visibility: collapse;
+    }
+    #navbar button{
+        width: 100px;
+        height: 40px;
+        border: 0px;
+        background-color:#ffc765;
+        border-radius: 10px;
+    }
+    #main{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
