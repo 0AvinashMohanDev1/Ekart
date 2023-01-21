@@ -162,29 +162,36 @@
             rating.innerText = "Rating:- "+ element.ratings;
 
             let details = document.createElement("h6")
+
+            // change is here
+            details.innerText = element.details.substring(0,75);
+            // let bus= src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg"
+
             details.innerText = element.details;
-           
+
 
             let addToCard = document.createElement("button")
             addToCard.innerHTML = "Add To Card";
             addToCard.addEventListener("click", () => {
-
-                let cardData = JSON.parse(localStorage.getItem("card"))
+                // change the key is here
+                let cardData = JSON.parse(localStorage.getItem("webUserData"))
+                let num=cardData[0].userNumberID;
                 if (cardData === null) cardData = []
                 //for singel products
                 let isAllReadyCard = false
-                for (let i = 0; i < cardData.length; i++) {
-                    if (cardData[i].id === element.id) {
+                for (let i = 0; i < cardData[num].userCartData.length; i++) {
+                    if (cardData[num].userCartData[i].id === element.id) {
                         isAllReadyCard = true;
                         break;
                     }
                 }
                 if (isAllReadyCard === true) {
                     alert("Product Already in Cart")
-                } else {
-                    cardData.push({ ...element, quantity: 1 })
-                    localStorage.setItem("card", JSON.stringify(cardData))
+                } else {//change the path of storing cart value
+                    cardData[num].userCartData.push({ ...element, quantity: 1 })
+                    localStorage.setItem("webUserData", JSON.stringify(cardData))
                     alert("Product Added To Cart")
+                    console.log(cardData[num].userCartData)
                 }
 
             })
