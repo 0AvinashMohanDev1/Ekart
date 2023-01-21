@@ -7,28 +7,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
         #body {
             display: flex;
-            width: 1156px;
+            width: 95%;
             height: auto;
-            margin: auto;
+            /* margin: auto; */
             justify-content: space-between;
+            font-family: 'Roboto', sans-serif;
         }
 
         #list {
-            width: 213px;
+            width: 370px;
             height: 100%;
-            border: 2px solid red;
             margin-right: 20px;
+            justify-content: left;
+    position: sticky;
+     top: 0;
+     z-index: 3;  
         }
 
-        #sortPrice {
+        /* #sortPrice {
             width: 100%;
             height: 50px;
             border: 2px solid black;
             font-size: x-large;
-            background-color: rgb(255, 0, 55);
+            background-color: rgb(247, 127, 153);
             color: aliceblue;
+        } */
+        .bar{
+            width: 100%;
+            height: 50px;
+            border: 2px solid black;
+            font-size: x-large;
+            background-color: rgb(247, 127, 153);
+            color: aliceblue;
+            position: sticky;
+           
         }
 
         #products {
@@ -76,15 +91,43 @@
 <body>
     <div id="body">
         <div id="list">
-            <select id="sortPrice">
-                <option value="">Sort By Price</option>
+            <select id="sortPrice" class="bar">
+                <option value=""> Price</option>
                 <option value="asc">Ascending</option>
                 <option value="desc">Descending</option>
             </select>
-            <select id="sortcategory">
-                <option value="">Sort By Price</option>
-                <option value="asc">Cosmetics</option>
-                <option value="desc">Descending</option>
+            <select id="Rating" class="bar">
+                <option value=""> Rating</option>
+                <option value="low">1-5</option>
+                <option value="high">6-10</option>
+            </select>
+            <select id="dresses" class="bar">
+                <option value=""> dresses</option>
+                <option value="male">male</option>
+                <option value="female">female</option>
+            </select>
+            <select id="Cosmetic" class="bar">
+                <option value=""> Cosmetic</option>
+                <option value="Cosmetics">Cosmetics</option>
+                <option value="Mini">Mini</option>
+            </select>
+            <select id="dates" class="bar">
+                <option value="">Release dates</option>
+                <option value="New">New Arival</option>
+                <option value="year">2023</option>
+                <option value="year">2022</option>
+                <option value="year">2021-2000</option>
+            </select>
+            <select id="Brand" class="bar">
+                <option value=""> Brands</option>
+                <option value="LV">louis vuitton</option>
+                <option value="gucci">Gucci</option>
+                <option value="balenciaga">Balenciaga</option>
+            </select>
+            <select id="Cosmetic" class="bar">
+                <option value=""> Cosmetic</option>
+                <option value="Cosmetics">Cosmetics</option>
+                <option value="Mini">Mini</option>
             </select>
         </div>
         <div id="products">
@@ -114,9 +157,13 @@
             name.innerText = element.name;
             let price = document.createElement("h3")
             price.innerText = "₹" + element.price;
+
+            let rating = document.createElement("h3")
+            rating.innerText = "Rating:- "+ element.ratings;
+
             let details = document.createElement("h6")
             details.innerText = element.details;
-            // let bus= src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg"
+           
 
             let addToCard = document.createElement("button")
             addToCard.innerHTML = "Add To Card";
@@ -142,7 +189,7 @@
 
             })
 
-            div.append(img, name, price, details, addToCard);
+            div.append(img, name, price,rating, details, addToCard);
             document.querySelector("#products").append(div);
         });
     }
@@ -150,12 +197,11 @@
 
     document.querySelector("#sortPrice").addEventListener("change", () => {
         let value = document.querySelector("#sortPrice").value;
-        console.log(value);
+       // console.log(value);
         if (value === "asc") {
             arr.sort((a, b) => {
                 return a.price - b.price;
             })
-            console.log("ratna");
             console.log(arr);
             hotDisplay(arr);
         }
@@ -165,7 +211,72 @@
             })
             hotDisplay(arr);
         }
-    })
+    });
+
+
+  let cloth=  document.querySelector("#dresses");
+  cloth.addEventListener("change",()=>{
+    let value =document.querySelector("#dresses").value;
+
+    arr = JSON.parse(localStorage.getItem("card"));
+    if(value === "male"){
+        arr=arr.filter(element => element.category=="male");
+       hotDisplay(arr)
+    }
+   else if(value === "female"){
+        arr=arr.filter(element => element.category=="female");
+       hotDisplay(arr)
+    }
+    else{
+        arr = JSON.parse(localStorage.getItem("card"));
+       hotDisplay(arr)
+    }
+})
+
+//cosmetic
+let cosmetic=  document.querySelector("#Cosmetic");
+  cosmetic.addEventListener("change",()=>{
+    let value =document.querySelector("#Cosmetic").value;
+
+    arr = JSON.parse(localStorage.getItem("card"));
+    if(value === "Cosmetics"){
+        arr=arr.filter(element => element.category=="Cosmetics");
+       hotDisplay(arr)
+    }
+   else if(value === "Mini"){
+        arr=arr.filter(element => element.category=="Mini");
+       hotDisplay(arr)
+    }
+    else{
+        arr = JSON.parse(localStorage.getItem("card"));
+       hotDisplay(arr)
+    }
+})
+
+
+
+
+//     document.querySelector("#Rating").addEventListener("change",()=>{
+//     let value =document.querySelector("#Rating").value;
+//     //console.log(value);
+//     arr = JSON.parse(localStorage.getItem("card"));
+//    if(value === "low"){
+//         arr=arr.filter(element =>{
+//             if(+(element.rating)<=5){
+//                 hotDisplay(arr);
+//             }
+//         });
+      
+//     }
+//    else if(value === "high"){
+//         arr=arr.filter(element => element.rating==="8");
+//         hotDisplay(arr);
+//     }
+//     else{
+//        // arr = JSON.parse(localStorage.getItem("registerdData"));
+//        hotDisplay(arr);
+//     }
+// })
 </script>
 
 </html>
