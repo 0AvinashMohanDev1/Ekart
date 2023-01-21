@@ -1,0 +1,132 @@
+#box_adding_detiles{
+    padding: 14px 12px 14px 44px;
+    background: url(/msassets/images/icons/location_detect_blue.svg) no-repeat 12px 10px;
+    letter-spacing: 1px;
+    font-family: JioBold;
+    font-size: 12px;
+    color: #008ecc;
+    line-height: 16px;
+    text-transform: uppercase;
+    border: 1px solid #008ecc;
+    display: inline-block;
+    width: 28%;
+    border-radius: 4px;
+    /* margin: 0 0 8px; */
+    cursor: pointer;
+    margin-left: 32%;
+    height: 15px;
+    margin-top: 25px;
+    display: flex;
+}
+#box_img{
+    width: 8%;
+}
+
+
+body {
+    background-color: rgb(243, 243, 243);
+    font-family: Calibri;
+    margin: 0px;
+}
+
+
+
+
+
+#part3 {
+    /* background-color: white; */
+    padding: 15px 20px;
+    margin: 10px;
+    flex: 1;
+    /* border: 2px solid black; */
+}
+
+
+#part1>h4 {
+    background-color: white;
+    padding: 10px 20px;
+    color: #fc2779;
+}
+
+#part1 {
+    /* border: 2px solid black;  */
+    flex: 1;
+    padding-left: 20px;
+}
+#new_div{
+    margin-bottom: 15px;
+}
+
+#box1 {
+    display: flex;
+}
+
+#img2 {
+    width: 90px;
+    height: 100px;
+    padding: 20px;
+}
+
+#box1 {
+    background-color: white;
+    margin: 0px 0px 40px 0px;
+}
+
+#box2 {
+    background-color: white;
+    padding: 20px;
+    font-family: 'Arial Narrow;
+
+}
+
+#part2 {
+    /* border: 2px solid black;     */
+    background-color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    flex: 1;
+}
+
+#part2>h4,
+h5 {
+    color: gray;
+    font-family: Arial;
+    font-weight: lighter;
+}
+
+#box2>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#par2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-around;
+  
+}
+
+.look {
+    padding: 10px 8px;
+    margin: 8px 0px;
+    width: 70%;
+}
+
+#ttarea {
+    padding: 10px 5px;
+    margin: 8px 0px;
+}
+
+
+#but2 {
+    width: 100%;
+    font-family: monospace;
+    font-size: large;
+    border: 0px;
+    padding: 15px;
+    background-color: #fc2779;
+    color: white;
+    margin: 10px 0px;
+    cursor: pointer;
+}
