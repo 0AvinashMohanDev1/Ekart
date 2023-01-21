@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+   >
+    
+    <link rel="stylesheet" href="/styles/adress.css">
+    <link rel="stylesheet" href="/styles/newaddress.css">
+    
+</head>
+
+<body>
+    <div class="nav shadow-sm">
+        <div class="logo p-4 text-center">
+        </div>
+    
+        <div class="option">
+          <div class="line"></div>
+          <div class="login ps-3 pt-3">
+            <p class="mb-0 ms-0">1 - LOGIN</p>
+            <!-- <p </p> -->
+          </div>
+          <div class="line"></div>
+          <div id="add" class="address pt-4 ps-3">
+            <p class="ms-0">2 - ADDRESS</p>
+          </div>
+          <div class="line"></div>
+          <div class="payment pt-4 ps-3">
+            <p class="ms-0">3 - PAYMENT</p>
+          </div>
+          <div class="line2"></div>
+        </div>
+      </div>
+    
+      <div id="box_adding_detiles">
+        <img id="box_img" src="https://www.jiomart.com/msassets/images/icons/location_detect_blue.svg" alt="">
+        <div><b>Detect My Location</b></div>
+      </div>
+    <div id="par2">
+        <div id="part1">
+            <h4> Address </h4>
+        </div>
+        <div id="part2">
+            <h3> Address Details </h3>
+            <hr>
+            
+            <input type="text"    id="class1" class="look" placeholder="Pin Code *">
+            <input type="text"    id="class2" class="look" placeholder="Flat/House No."> 
+             <input type="email"  id="class3" class="look" placeholder="Floor No."> 
+             <input type="number" id="class4"  class="look" placeholder="Tower No."> 
+             <input type="text"   id="class5"  class="look" placeholder="City/State"> 
+
+            <textarea id="ttarea" style="width: 92%;" rows="4" placeholder="Address "></textarea>
+            <button id="but2"> SHIP TO THIS ADDRESS ></button>
+        </div>
+        <div id="part3">
+            <div id="add1">
+                <div id="container">
+                    
+                </div>
+                <div id="box2">
+
+                    <div>
+                        <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/header-address.svg" alt="">
+                    </div>
+                    <hr>
+                    <div>
+                        <h4>Wellcome To Nykaa </h4>
+                        <!-- <h4 class="totalprice"> </h4> -->
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>
+
+
+<script>
+
+   
+
+
+
+    document.querySelector("#but2").addEventListener("click", page);
+
+    function page() {
+let class1=document.querySelector("#class1").value;
+let class2=document.querySelector("#class2").value;
+let class3=document.querySelector("#class3").value;
+let class4=document.querySelector("#class4").value;
+let class5=document.querySelector("#class5").value;
+let class6=document.querySelector("#ttarea").value;
+        if(class1==""||class2==""||class3==""||class4==""||class5==""||class6==""){
+            alert("Fill all credincail")
+        }else{
+            window.location.href = "payment.html";
+        }
+       console.log(class1)
+        
+    }
+
+
+</script>
