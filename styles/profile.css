@@ -1,9 +1,13 @@
+*{
+    padding: 0px 10px;
+    margin: 0px;
+}
 #conteinar{
     display: flex;
 justify-content: space-between;}
 .profile{
 width: 40%;
-background-color: aqua;
+/* background-color: aqua; */
 }
 .edit{
     width: 50%;

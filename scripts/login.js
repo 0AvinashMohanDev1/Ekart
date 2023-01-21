@@ -3,7 +3,7 @@ let userData=JSON.parse(localStorage.getItem("webUserData"))||[];
 let loginForm=document.getElementById('loginForm');
 let signupForm=document.getElementById('signupForm');
 let printError=document.getElementById('alert');
-// console.log(userData)
+console.log(userData)
 
 
 loginForm.addEventListener("submit",(e)=>{
@@ -17,7 +17,7 @@ loginForm.addEventListener("submit",(e)=>{
         gender:loginForm.gender.value
     };
     let obj={
-        userProfileNumber:-1,
+        // userProfileNumber:-1,
         id:loginForm.email.value,
         userPersonalData:tempData,
         userCartData:[]
@@ -55,8 +55,9 @@ loginForm.addEventListener("submit",(e)=>{
     
 
     /*
-for deleting all the users data
+// for deleting all the users data
     userData=[];
+    userData.unshift({userNumberID:-1});
     localStorage.setItem("webUserData",JSON.stringify(userData));
 */
 })
@@ -75,18 +76,20 @@ signupForm.addEventListener("submit",(e)=>{
         if(userData[i].id===signupData.email){
             if(userData[i].userPersonalData.password===signupData.password){
                 signupResult=true;
-                userNumberID=i;
+                userData[0].userNumberID=i;
+                localStorage.setItem("webUserData",JSON.stringify(userData));
+                console.log(userData);
                 break;
             }
         }
     }
     if(signupResult){
         userData[0].userProfileNumber=userNumberID;
-        if(userData[userNumberID].id==='avinashmohandev@gmail.com'){
+        if(userData[userData[0].userNumberID].id==='admin0@gmail.com'){
             alert(`welcome back admin!`);
             window.location.href='/admin/admin.html'
         }else{
-            alert(`Welcome back ${userData[userNumberID].userPersonalData.name}`);
+            alert(`Welcome back ${userData[userData[0].userNumberID].userPersonalData.name}`);
             window.location.href='./profile.html';
         }
         
@@ -95,11 +98,8 @@ signupForm.addEventListener("submit",(e)=>{
         
     }
 })
-
-
-
-
-
+console.log(userData);
+console.log(userData[0].userNumberID);
 let strongPassword=(num)=>{
     num=num.trim().split("");
     let size=[];
