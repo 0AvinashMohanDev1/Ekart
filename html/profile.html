@@ -8,9 +8,14 @@
     <link rel="stylesheet" href="/styles/profile.css">
 </head>
 <body>
-    <a href="/html/login.html">login</a>
-    <div id="conteinar">
-        <div class="profile">
+    <!-- <a href="/html/login.html">login</a> -->
+    <nav>
+        <a href="/html/login.html">login</a>
+    </nav>
+    <div class="conteinar" id="blur">
+        <!-- change class profile to content -->
+        <h2>Personal Data</h2>
+        <div class="content">
                 <label for="name">Name:</label><br>
                 <!-- <button id="edit">edit</button><br> -->
                 <h3 class="name" id="name">please login first</h3>
@@ -23,27 +28,28 @@
                 <label for="gender">Gender:</label><br>
                 <h3 class="name" id="gender">please login first</h3>
                 <button id="logout">log out</button>
-                <button>edit</button>
+                <!-- change -->
+                <a href="#" onclick="toggle()">Edit</a>
         </div>
-        <div class="edit">
+        <div class="edit" id="popup">
             <h2>You can edit here</h2>
             <form action="" id="editForm" class="profile">
-                <label for="editName">Name:</label>
-                <input type="text" name="editName" id="editName">
-                <label for="editEmail">Email:</label>
-                <input type="email" name="editEmail" id="editEmail">
-                <label for="editPhone">Phone:</label>
-                <input type="number" name="editPhone" id="editPhone">
-                <label for="editAge">Age:</label>
-                <input type="number" name="editAge" id="editAge">
-                <label for="editGender">Gender:</label>
-                <input type="text" name="editGender" id="editGender">
-                <input type="submit" value="submit" id="submit">
-                <button>edit</button>
+                <label for="editName">Name:</label><br>
+                <input type="text" name="editName" id="editName"><br>
+                <label for="editEmail">Email:</label><br>
+                <input type="email" name="editEmail" id="editEmail"><br>
+                <label for="editPhone">Phone:</label><br>
+                <input type="number" name="editPhone" id="editPhone"><br>
+                <label for="editAge">Age:</label><br>
+                <input type="number" name="editAge" id="editAge"><br>
+                <label for="editGender">Gender:</label><br>
+                <input type="text" name="editGender" id="editGender"><br>
+                <!-- <input type="submit" value="submit" id="submit"> -->
+                <!-- <button>edit</button> -->
+                <a href="#" onclick="toggle()">
+                    <input type="submit" value="submit" id="submit">
+                </a>
             </form>
-        </div>
-        <div>
-            <a href="/html/cart.html">cart_🛒</a>
         </div>
     </div>
 </body>

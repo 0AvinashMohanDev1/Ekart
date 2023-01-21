@@ -1,7 +1,7 @@
 
 let data=JSON.parse(localStorage.getItem('webUserData'))||[];
 
-let profile=document.getElementsByClassName('profile');
+let profile=document.getElementsByClassName('content');
 
 let edit=document.getElementById('edit');
 
@@ -39,6 +39,7 @@ editForm.addEventListener('submit',(e)=>{
         }
         if(email){
             data[num].userPersonalData.email=email;
+            data[num].id=email;
         }
         if(age){
             data[num].userPersonalData.age=age;
@@ -47,7 +48,7 @@ editForm.addEventListener('submit',(e)=>{
             data[num].userPersonalData.gender=gender;
         }
     }else{
-        alert('please login first');
+        console.log('please login first');
     }
     console.log(name);
     localStorage.setItem('webUserData',JSON.stringify(data));
@@ -61,3 +62,10 @@ logout.addEventListener('click',()=>{
     localStorage.setItem('webUserData',JSON.stringify(data));
     location.reload();
 })
+
+function toggle(){
+    var blur=document.getElementById('blur');
+    blur.classList.toggle('active');
+    var popup=document.getElementById('popup');
+    popup.classList.toggle('active');
+}
