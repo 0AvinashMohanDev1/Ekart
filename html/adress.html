@@ -16,6 +16,16 @@
      />
     
     <link rel="stylesheet" href="/styles/adress.css">
+    <style>
+      .option {
+    display: flex;
+    width: 40%;
+  
+    margin-left: 25%;
+  }#new{
+    cursor: pointer;
+  }
+    </style>
    </head>
    <body>
      <div class="nav shadow-sm">
@@ -23,12 +33,12 @@
        <div class="option">
          <div class="line"></div>
          <div class="login ps-3 pt-3">
-           <p class="mb-0 ms-0">1 - LOGIN</p>
+           <p id="log" class="mb-0 ms-0">1 - LOGIN</p>
            <p class="mt-0 smallemail ms-0"></p>
          </div>
          <div class="line"></div>
          <div  class="address pt-4 ps-3">
-           <p class="ms-0">2 - ADDRESS</p>
+           <p id="new" class="ms-0">2 - ADDRESS</p>
          </div>
          <div class="line"></div>
          <div id="add" class="payment pt-4 ps-3">
@@ -58,17 +68,19 @@
         </div>
 
      </div>
-     <div id="add_new_img">
-        <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/header-address.svg" alt="">
+     <div>
+        <img id="add_new_img" src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/header-address.svg" alt="">
     </div>
 
    </body>
    <script>
-    document.querySelector("#add").addEventListener("click",function(){
-    window.location.href="payment.html"
-  })
-  document.querySelector("#box").addEventListener("click",function(){
     
+  document.querySelector("#new").addEventListener("click",function(){
+    window.location.reload();
+  })
+  let box=document.querySelector("#box");
+  box.addEventListener("click",()=>{
+    window.location.href="newaddress.html"
   })
    </script>
  </html>
