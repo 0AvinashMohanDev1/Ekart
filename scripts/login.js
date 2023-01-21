@@ -3,7 +3,7 @@ let userData=JSON.parse(localStorage.getItem("webUserData"))||[];
 let loginForm=document.getElementById('loginForm');
 let signupForm=document.getElementById('signupForm');
 let printError=document.getElementById('alert');
-// console.log(userData)
+console.log(userData)
 
 
 loginForm.addEventListener("submit",(e)=>{

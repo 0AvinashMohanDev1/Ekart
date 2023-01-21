@@ -6,27 +6,34 @@ let mainSection = document.getElementById("main");
 //navbar
 navBar.innerHTML = `
 <div>
-    <button id="removeProducts">Remove Product</button>
+    <button id="removeProducts">All Products</button>
     <button id="addProducts">Add Product</button>
     <button id="editProducts">Edit Product</button>
 </div>
 `;
 let removeProductsButton = document.getElementById("removeProducts");
+let userData=JSON.parse(localStorage.getItem("webUserData"))||[];
 
 window.addEventListener("load", (event) => {
   event.preventDefault();
-  mainSection.innerHTML = `  
-  <div id="dashboard">
-  <h2>DASHBOARD</h2>
-
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl1RGsMu9uIW9b_TaoJ_ILmw_2W9HQY9hFuCrDd8v2SQ&s" alt="user logo">
-    <h2>Users : </h2>  
-  
-    <img src="/photos/sales.png" alt="sales logo">
-      <h2>Sales : </h2>
-  </div>
- 
-  `;
+  fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        let totalProducts=data.length;
+        mainSection.innerHTML = `  
+        <div id="heading">
+        <h1>DASHBOARD</h1> 
+        <div id="first">
+        <img src="https://cdn-icons-png.flaticon.com/128/456/456212.png">
+        <h2>TOTAL USERS :----  ${userData.length}</h2>
+        </div>
+        <div id="second">
+        <img src="https://cdn-icons-png.flaticon.com/128/1474/1474613.png">
+        <h2>TOTAL PRODUCTS :---- ${totalProducts}</h2>  
+        </div>
+        </div>        
+        `;
+      });
 });
 
 //--------------------------------------------//
@@ -38,11 +45,12 @@ removeProductsButton.addEventListener("click", () => {
 function fetchAndRenderAll() {
   try {
     fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        // console.log(data);
-        renderList(data);
-      });
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data.length);
+      totalProducts=data.length
+      renderList(data);
+    });
   } catch (error) {
     console.log(error);
   }
@@ -212,7 +220,7 @@ function editProduct() {
     <input type="text" id="image" required><br>
     <hr>
     <input type="submit" value="Submit">
-    </form>    
+    </form>  
     `;
 
   const myform = document.getElementById("addForm");
