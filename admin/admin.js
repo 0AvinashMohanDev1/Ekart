@@ -9,10 +9,15 @@ navBar.innerHTML = `
     <button id="removeProducts">All Products</button>
     <button id="addProducts">Add Product</button>
     <button id="editProducts">Edit Product</button>
+    <button id="logOut">Log out</button>
 </div>
 `;
 let removeProductsButton = document.getElementById("removeProducts");
 let userData=JSON.parse(localStorage.getItem("webUserData"))||[];
+
+logOut.addEventListener('click',()=>{
+  window.location.href='/index.html'
+})
 
 window.addEventListener("load", (event) => {
   event.preventDefault();

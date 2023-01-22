@@ -1,10 +1,11 @@
 let data=JSON.parse(localStorage.getItem('webUserData'))||[];
 let num=data[0].userNumberID;
 let cart=document.getElementById('cart');
-let bill=document.getElementById('pay');
+let bill=document.getElementById('total');
 let coupan=document.getElementById('masai20');
-let couponBtn=document.getElementById('coupan');
-let totalQuantity=document.getElementById('totalQuantity');
+let couponBtn=document.getElementById('coupon');
+let totalQuantity=document.getElementById('qty');
+// let discount=document.getElementById('discount');
 display(data[num].userCartData);
 
 function display(value){
@@ -13,7 +14,8 @@ function display(value){
         totalCartValue+=(value[i].quantity)*(value[i].price);
         console.log(value[i]);
     }
-    totalCartValue-=totalCartValue*(0.20);
+    // totalCartValue-=totalCartValue*(0.20);
+    // discount.innerText=totalCartValue;
     couponBtn.addEventListener('click',(e)=>{
         e.preventDefault();
         if(coupan.value==='masai20'){
@@ -52,7 +54,6 @@ function display(value){
 
     let quantity=document.createElement('h2');
     quantity.setAttribute('class','add');
-    // quantity.style.backgroundColor='#c6c4b0'
     quantity.innerText=element.quantity;
     
     let subs=document.createElement('h3');;
@@ -104,5 +105,8 @@ function display(value){
 }
 
 
-
+let newbutton=document.getElementById('newbutton');
+newbutton.addEventListener('click',()=>{
+    window.location.href='./adress.html'
+})
 

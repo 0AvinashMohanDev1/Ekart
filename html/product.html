@@ -86,7 +86,7 @@
     <nav class="navbar-1-2">
         <nav class="navbar-1">
             <div id="left">
-               <a href="index.html"><h4>BEAUTY BONANZA Get Your Daily Dose Of Amazing Deals</h4></a> 
+               <a href="/index.html"><h4>BEAUTY BONANZA Get Your Daily Dose Of Amazing Deals</h4></a> 
             </div>
             <div id="right">
                 <button id="Getapp-btn"><i class="fa-solid fa-mobile-screen-button"></i> Get App</button> |
@@ -116,7 +116,7 @@
             <div id="bag"><a href="/html/cart.html"><i class="fa-solid fa-bag-shopping"></i></a></div>
             
             </div>
-            <a href="./index.html">home🏡</a>
+            <a href="/index.html">home🏡</a>
             <a href="/html/profile.html">🦁</a>
         </nav>
     </nav>
@@ -291,17 +291,22 @@
     </div>
 </body>
 <script>
-    let arr;
+    let arr=[];
     let url = `https://639b3492d5141501974eaf28.mockapi.io/nykaa`
     fetch(url).then((res) => {
         return res.json();
     }).then((data) => {
         hotDisplay(data);
-        //console.log(data);
-        arr = data;
+        console.log(data);
+        data.forEach((e)=>{
+            arr.push(e);
+        })
+        // console.log(arr);
     }).catch((err) => {
         alert(err)
     })
+    console.log(arr);
+    
     function hotDisplay(data) {
         document.querySelector("#products").innerHTML = null;
         data.forEach(element => {

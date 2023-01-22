@@ -12,7 +12,7 @@ let arr = ['https://images-static.nykaa.com/uploads/cf96cee1-979c-4f29-bc44-ae4d
             slider.innerHTML=`
             <img src=${image} alt="Banner-Nykaa" >
             `
-            console.log(i)
+            // console.log(i)
             i++;
             if(i==arr.length){
                 i=0;
@@ -20,3 +20,13 @@ let arr = ['https://images-static.nykaa.com/uploads/cf96cee1-979c-4f29-bc44-ae4d
         }
 
     }, 2500)
+    // let search=document.getElementById("search");
+    // search.addEventListener("input",()=>{
+    //     container.innerHTML=null;
+    //     let input=search.value.toLowerCase();
+    //     let newData=productData.filter((el)=>{
+    //         return el.Title.toLowerCase().includes(input);
+    //     });
+    //     console.log(newData);
+    //     display(newData);
+    // });

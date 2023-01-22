@@ -92,7 +92,7 @@ signupForm.addEventListener("submit",(e)=>{
             window.location.href='/admin/admin.html'
         }else{
             alert(`Welcome back ${userData[userData[0].userNumberID].userPersonalData.name}`);
-            window.location.href='./index.html';
+            window.location.href='/index.html';
         }
         console.log(userData);
     }else{

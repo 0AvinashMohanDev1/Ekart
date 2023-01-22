@@ -64,7 +64,7 @@
 #navbar div{
     display: grid;
     margin: auto;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     gap: 100px;
    
 }
@@ -166,7 +166,9 @@
         grid-template-columns: repeat(2,1fr);
     }
 }
-
+#logOut{
+    font-family: Arial, Helvetica, sans-serif;
+}
 @media only screen and (max-width: 450px){
     #heading{
         visibility: collapse;

@@ -120,26 +120,21 @@
       <div class="content shadow-sm bg-body" id="totalprice">
         <div class="price-cont bg-body">
           <div class="subtotal mt-3">
-            <div>MRP Total : <span></span></div>
+            <div>MRP Total : <span id="amount"></span></div>
             
             <div id="subt"></div>
             <hr>
           </div>
           <div class="shc mt-3">
-            <div>Product Discount</div>
+            <div>Product Discount: <b>20%</b></div>
             
           </div>
           <hr>
           <div class="ds mt-3">
-            <div class="deta"><b>Total Amount</b></div>
+            <div class="deta"><b>Total Amount: </b><span id="total"></span></div>
             
           </div>
           <hr>
-
-          
-          
-
-
 
         </div>
       </div>
@@ -154,10 +149,6 @@
 
 
 </div>
-
-
-    
-    
         </div>
       </div>
     </div>
@@ -182,5 +173,16 @@ if(class1==""||class2==""||class3==""||class4==""){
 function myfun(){
   window.location.href="adress.html"
 }
+let data=JSON.parse(localStorage.getItem('webUserData'))||[];
+let num=data[0].userNumberID;
+let amount=document.getElementById('amount');
+let total=document.getElementById('total');
+let balance=0;
+for(let i=0;i<data[num].userCartData.length;i++){
+  balance+=data[num].userCartData[i].price*data[num].userCartData[i].quantity;
+}
+amount.innerText=balance;
+
+total.innerText=balance-balance*(.2);
  </script>
 </html>
