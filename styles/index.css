@@ -20,7 +20,10 @@
 #left a{
     text-decoration: none;
     color: black;
-    margin: auto;
+}
+#top-text{
+    margin-left: 80px;
+    padding-bottom: 20px;
 }
 #left h4{
     color: rgb(35, 34, 34);
@@ -30,13 +33,13 @@
     display: flex;
     align-items: center;
 }
-#right > button{
+#right button{
     margin: 0 20px;
     border: none;
     background-color: transparent;;
     font-size: 15px;
 }
-#right > button:hover{
+#right button:hover{
     color: rgb(241, 240, 240);
     transition: all ease-in-out 220ms;
     cursor: pointer;
@@ -315,7 +318,9 @@
 .Footer-1{
     width: 100%;
     background-color: #3f414d;
-    height: 20vh;
+    height: 18vh;
+    font-family: Inter, Roboto, Arial, sans-serif;
+    font-size: 15px;
 }
 .Footer-1-1{
     width: 70%;
@@ -409,4 +414,20 @@
     margin: auto;
     display: flex;
     padding-top: 0;
+}
+.Footer-end{
+    background-color: #fc2779;
+    color: #ffffff;
+    margin-bottom: 50px;
+    height: 13vh;
+    font-family: Inter, Roboto, Arial, sans-serif;
+}
+.Footer-end-1{
+    width: 40%;
+    margin: auto;
+    text-align: center;
+}
+.Footer-end-inside{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
 }
