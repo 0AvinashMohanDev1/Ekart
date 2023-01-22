@@ -1,35 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/styles/cart.css">
+    <style>
+        .navbar-1 {
+            display: flex;
+            justify-content: space-between;
+            height: 5vh;
+            background-image: url('https://adn-static1.nykaa.com/media/wysiwyg/2021/common-strip.jpg');
+            background-size: cover;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        #left {
+            align-items: center;
+            padding-left: 85px;
+            align-items: center;
+        }
+
+        #left img {
+            /* text-decoration: none;
+            color: black; */
+            background-color: aliceblue;
+            width: 50px;
+            height: 37px;
+            margin: auto;
+        }
+
+        #left h4 {
+            color: rgb(35, 34, 34);
+        }
+
+        #right {
+            padding-right: 130px;
+            display: flex;
+            align-items: center;
+        }
+
+        #right>button {
+            margin: 0 20px;
+            border: none;
+            background-color: transparent;
+            ;
+            font-size: 15px;
+        }
+
+        #right>button:hover {
+            color: rgb(241, 240, 240);
+            transition: all ease-in-out 220ms;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
-    <nav id="nav">
-        <a href="/html/login.html">login</a>
-        <a href="/html/product.html">products</a>
+    <nav class="navbar-1">
+        <div id="left">
+            <a href="index.html">
+                <img src="https://hindubabynames.info/downloads/wp-content/themes/hbn_download/download/cosmetic-companies/nykaa-logo.png"
+                    alt="Nyka">
+            </a>
+        </div>
+        <div id="right">
+            <button id="Getapp-btn"><i class="fa-solid fa-mobile-screen-button"></i> Get App</button> |
+            <button id="Stores"><i class="fa-sharp fa-solid fa-location-dot"></i> Stores & Events</button> |
+            <button><i class="fa-solid fa-gift"></i> Gift Card</button> |
+            <button><i class="fa-solid fa-question"></i> Help</button>
+        </div>
     </nav>
-    <div id="login">
-        <p>2000 Reward Points on new registration</p>
-        <button id="loginhere">
-            <a href="/html/login.html">login/register</a>
-        </button>
-    </div>
-    <div id="container">
+    <!-- body of product page -->
+
+    <div class="container">
         <div id="cart">Add Some Product to see</div>
     </div>
     <div id="price">
         <label for="discount">Add coupan to get Discount</label>
         <input type="text" id='masai20'>
         <button id="coupan">Add coupan</button>
-           
+
         <div id="discount">Nykaa Discount:-20% Off</div>
         <label for="quantity">total quantity:</label>
         <div id="totalQuantity"></div>
-        
+
         <label for="bill">Total payable amount:</label>
         <div id="pay">pay bills</div>
         <button>
@@ -37,5 +95,6 @@
         </button>
     </div>
 </body>
+
 </html>
 <script src="/scripts/cart.js"></script>

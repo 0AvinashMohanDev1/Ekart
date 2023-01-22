@@ -1,39 +1,119 @@
-*{
-    box-sizing: border-box;
-}
-#Container{
-    width: 100%;
-    background-color: #C7C0F0;
-    /* border: 5px solid green; */
-    border-radius: 50px;
-}
-/* #card{
-    width: 80%;
-    display: flex;
-    grid-auto-columns: repeat(3,1fr);
-    padding: 20px;
-    text-align: center;
-    background-color: rgb(255, 255, 255);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 20px;
-} */
-#addsubs{
-    /* display: flex; */
+* {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
 }
 
-#nav{
+#addsubs {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+
+}
+
+#cart {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin: 20px;
+    padding: 20px;
+    /* margin: auto; */
+}
+
+#card {
+    width: auto;
+    height: auto;
+    background-image: url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000);
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+#card img {
+    width: 80%;
+    height: 50%;
+    margin-top: 2px;
+    border-radius: 10px;
+
+}
+
+#nav {
     margin: 15px 0px 30px 10px;
-    background-color: #f0eedb;
+    background-color: #c6c4b0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-a{
-    position: relative;
-    padding: 5px 20px;
-    display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
-    color:#fff;
-    background: #111;
+
+#cart h3,
+#cart p {
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 480px) and (max-width:700px) {
+    #cart {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: 15px;
+        padding: 15px;
+        /* margin: auto; */
+    }
+
+    #card {
+        width: auto;
+        height: auto;
+        background-image: url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000);
+        height: auto;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    #card img {
+        width: 60%;
+        height: 30%;
+        margin-top: 2px;
+        border-radius: 8px;
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #cart {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin: 15px;
+        padding: 15px;
+        /* margin: auto; */
+    }
+
+    #card {
+        width: auto;
+        height: auto;
+        background-image: url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000);
+        height: auto;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    #card img {
+        width: 60%;
+        height: 30%;
+        margin-top: 2px;
+        border-radius: 8px;
+
+    }
+    #remove:hover{
+        cursor: pointer;
+    }
 }
