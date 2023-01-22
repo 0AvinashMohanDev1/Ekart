@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkOut Page</title>
+    <style>
+        #mainBody {
+            display: flex;
+            width: 90%;
+            margin: auto;
+            height: auto;
+            /* justify-content: space-between; */
+            gap: 20px;
+            /* justify-content: center; */
+            /* flex-wrap: wrap; */
+            /* flex-direction: row; */
+
+        }
+
+        #addproducts {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 1097px;
+            height: 100%;
+            gap: 24px;
+        }
+
+        #addproducts div {
+
+            margin: auto;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 10px;
+        }
+
+        #addproducts img {
+            width: 100%;
+            height: auto;
+        }
+
+        .delts {
+            display: flex;
+            width: 300px;
+            justify-content: space-between;
+        }
+
+        #details {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            padding-left: 20px;
+            padding-bottom: 10px;
+            margin-top: 0px;
+            position: sticky;
+            top: 0;
+            z-index: 3;
+            width: auto;
+
+
+        }
+
+        /* #details>div {} */
+
+        .cupon {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: black;
+            color: aliceblue;
+        }
+        #cuponbox {
+            background-color: black;
+        }
+        #cuponbox img {
+            width: 20%;
+            height: 100%;
+            
+        }
+        .input{
+            border-top: 0ch;
+            border-left: 0ch;
+            border-right: 0ch;
+            background-color: greenyellow;
+            background-color: black;
+            border-color: aliceblue;
+            padding-bottom: 2px;
+            color: aliceblue;
+            font-size: large;
+        }
+
+        .checkOut {
+            display: flex;
+            margin: auto;
+            align-items: center;
+            width: auto;
+            border-radius: 40px;
+            background-color: rgb(255, 97, 85);
+            color: aliceblue;
+            font-size: larger;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mainBody">
+        <div id="addproducts">
+
+        </div>
+        <div id="details">
+            <h2>Price Details</h2>
+            <div class="delts">
+
+                <h4>Bag MRP</h4>
+                <h4 class="cost"></h4>
+            </div>
+            <div class="delts">
+                <h4>Total item</h4>
+                <h4 class="item"></h4>
+            </div>
+            <div class="delts">
+                <h4>Discount</h4>
+                <h4>20%</h4>
+            </div>
+            <div class="delts">
+                <h4>Shipping</h4>
+                <h4>Free</h4>
+            </div>
+            <div class="delts">
+                <h2>You Pay</h2>
+                <h2 class="tp"></h2>
+            </div>
+            <hr>
+            <div id="cuponbox">
+                <div class="cupon">
+                    <img src="data:image/png;base64,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"
+                        alt="">
+                    <h3> Apply Coupon</h3>
+                </div>
+                <div class="input">
+                    <input class="input" type="text">
+                    <button id="cuponBtn"> Apply</button>
+                </div>
+            </div>
+           
+
+            <button class="checkOut">
+                <h4>CheckOut</h4>
+                <h3 class="ctp"></h3>
+            </button>
+
+        </div>
+    </div>
+
+</body>
+<script>
+    let products = document.querySelector("#addproducts")
+    // console.log(products.length);
+
+    let cardData = JSON.parse(localStorage.getItem("card"));
+    if (cardData === null) {
+        cardData = []
+    }
+    dessertsDisplay(cardData)
+    function dessertsDisplay(data) {
+        products.innerHTML = null
+        data.forEach((element, index) => {
+            let div = document.createElement("div");
+            let img = document.createElement("img");
+            img.setAttribute("src", element.image);
+            let name = document.createElement("h2")
+            name.innerText = element.name;
+            let price = document.createElement("h3")
+            price.innerText = "₹" + element.price;
+
+            let increment = document.createElement("button")
+            increment.innerText = "+";
+            let quantity = document.createElement("span")
+            quantity.innerText = "1";
+
+            let decrement = document.createElement("button")
+            decrement.innerText = "-";
+
+            let btn = document.createElement("button")
+            btn.innerText = "remove"
+            btn.addEventListener("click", () => {
+                data.splice(index, 1)
+                dessertsDisplay(data)
+                localStorage.setItem("card", JSON.stringify(data))
+
+
+                let totalCost = cardData.reduce((acc, element) => acc + Number(element.price), 0);
+                document.querySelector(".cost").innerText = "₹ " + totalCost;
+                let tp = document.querySelector(".tp")
+                tp.innerText = "₹" + totalCost;
+                let ctp = document.querySelector(".ctp")
+                ctp.innerText = "₹" + totalCost;
+                let item = document.querySelector(".item")
+                item.innerText = cardData.length + "  ITEMS";
+            })
+            div.append(img, name, price, decrement, quantity, increment, btn);
+            products.append(div);
+
+
+        });
+    }
+
+
+    // let pricebox = document.querySelector("#totalPrice")
+
+    let item = document.querySelector(".item")
+    item.innerText = cardData.length + "  ITEMS";
+
+    let totalCost = cardData.reduce((acc, element) => acc + Number(element.price), 0);
+    document.querySelector(".cost").innerText = "₹ " + totalCost;
+
+    let tp = document.querySelector(".tp")
+    tp.innerText = "₹" + totalCost;
+    let ctp = document.querySelector(".ctp")
+    ctp.innerText = "₹" + totalCost;
+
+    let checkOut = document.querySelector(".checkOut")
+    checkOut.addEventListener("click", () => {
+        console.log("sgv");
+        // window.open("\maxed-bell-2106\day-4\checkOut.html");
+        //  window.open("\checkOut.html");
+        //location.href = "www.yoursite.com";
+    })
+
+    document.querySelector("#cuponBtn").addEventListener("click", () => {
+        let value = document.querySelector(".input").value;
+        if (value == "Masai20") {
+            let dis = Math.floor(totalCost - (totalCost * 20) / 100);
+            document.querySelector(".tp").innerText = dis;
+            ctp.innerText = "₹" + dis;
+        }
+    })
+</script>
+
+</html>

@@ -3,33 +3,39 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: antiquewhite; */
-    background-image: url(https://cdn.pixabay.com/photo/2017/02/08/17/24/fantasy-2049567__340.jpg);
+    background-color: antiquewhite;
+    background-image: url(https://thumbs.dreamstime.com/b/abstract-autumn-background-beautiful-leaves-texture-34325133.jpg);
  }
  #login,#signup{
      height: 400px;
      width: 300px;
-     background-color: rgba(4, 4, 7, 0.5);
+     background-color: rgba(255, 255, 255, 0.5);
      /* background-color: black; */
      margin: auto;
      font-family: sans-serif;
      font-weight: 600;
      padding: 25px 15px;
-     background-image: url(https://c4.wallpaperflare.com/wallpaper/213/73/152/cup-coffee-beverage-tea-wallpaper-preview.jpg);
-     color: cyan;
+     border-radius: 40px;
+     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVyxRs-h0nc8s5H-WQp77bKk33r0rOpvO7Pw&usqp=CAU);
+     color: rgb(156, 0, 180);
+     /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
  }
  #submit,h3,#signSubmit {
      display: flex;
      margin: auto;
-     background-color: #18FFFF;
+     background-color: #ffffff;
      /* margin: 10px ; */
      justify-content: center;
      align-items: center;
+     font-size: larger;
+     /* line-height: 2px; */
      color: black;
+     border-radius: 10px;
  }
- #submit{
+ #submit,#signSubmit{
      width: 70px;
      font-weight: 500;
+     border: 0px;
  }
  #alert{
      color: red;

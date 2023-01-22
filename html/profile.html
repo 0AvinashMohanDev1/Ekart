@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/profile.css">
+</head>
+<body>
+    <!-- <a href="/html/login.html">login</a> -->
+    <nav>
+        <a href="/html/login.html">login</a>
+    </nav>
+    <div class="conteinar" id="blur">
+        <!-- change class profile to content -->
+        <h2>Personal Data</h2>
+        <div class="content">
+                <label for="name">Name:</label><br>
+                <!-- <button id="edit">edit</button><br> -->
+                <h3 class="name" id="name">please login first</h3>
+                <label for="email">E-mail:</label><br>
+                <h3 class="name" id="email">please login first</h3>
+                <label for="phone">phone:</label><br>
+                <h3 class="name" id="phone">please login first</h3>
+                <label for="age">age:</label><br>
+                <h3 class="name" id="age">please login first</h3>
+                <label for="gender">Gender:</label><br>
+                <h3 class="name" id="gender">please login first</h3>
+                <button id="logout">log out</button>
+                <!-- change -->
+                <a href="#" onclick="toggle()">Edit</a>
+        </div>
+        <div class="edit" id="popup">
+            <h2>You can edit here</h2>
+            <form action="" id="editForm" class="profile">
+                <label for="editName">Name:</label><br>
+                <input type="text" name="editName" id="editName"><br>
+                <label for="editEmail">Email:</label><br>
+                <input type="email" name="editEmail" id="editEmail"><br>
+                <label for="editPhone">Phone:</label><br>
+                <input type="number" name="editPhone" id="editPhone"><br>
+                <label for="editAge">Age:</label><br>
+                <input type="number" name="editAge" id="editAge"><br>
+                <label for="editGender">Gender:</label><br>
+                <input type="text" name="editGender" id="editGender"><br>
+                <!-- <input type="submit" value="submit" id="submit"> -->
+                <!-- <button>edit</button> -->
+                <a href="#" onclick="toggle()">
+                    <input type="submit" value="submit" id="submit">
+                </a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<script src="/scripts/profile.js"></script>
