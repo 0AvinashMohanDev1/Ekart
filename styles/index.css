@@ -152,6 +152,7 @@
     transition: all ease-in-out 220ms;
     cursor: pointer;
 }
+
 .container-1 img{
     width: 100%;
     border-radius: 5px;
@@ -430,4 +431,42 @@
 .Footer-end-inside{
     display: grid;
     grid-template-columns: repeat(4,1fr);
+}
+
+@media screen and (min-width:201px) and (max-width:600px){
+    .container-2{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 16px;
+    }
+    
+    .container-3{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 16px;
+    }
+    
+    .container-4{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 16px;
+    }
+    
+    .container-5{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 16px;
+    }
+    
+    .container-8{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 16px;
+    }
+    
+    .Footer-3-1{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    
 }
