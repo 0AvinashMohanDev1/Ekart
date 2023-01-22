@@ -1,52 +1,7 @@
-/* body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: antiquewhite;
-    background-image: url(https://thumbs.dreamstime.com/b/abstract-autumn-background-beautiful-leaves-texture-34325133.jpg);
- }
- #login,#signup{
-     height: 400px;
-     width: 300px;
-     background-color: rgba(255, 255, 255, 0.5);
-     /* background-color: black; */
-     /* margin: auto; */
-     /* font-family: sans-serif; */
-     /* font-weight: 600; */
-     /* padding: 25px 15px; */
-     /* border-radius: 40px; */
-     /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVyxRs-h0nc8s5H-WQp77bKk33r0rOpvO7Pw&usqp=CAU); */
-     /* color: rgb(156, 0, 180); */
-     /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
- /* } */ */
- /* #submit,h3,#signSubmit {
-     display: flex;
-     margin: auto;
-     background-color: #ffffff;
-     /* margin: 10px ; */
-     /* justify-content: center; */
-     /* align-items: center; */
-     /* font-size: larger; */
-     /* line-height: 2px; */
-     /* color: black; */
-     /* border-radius: 10px; */
- /* } */ */
- /* #submit,#signSubmit{
-     width: 70px;
-     font-weight: 500;
-     border: 0px;
- }
- #alert{
-     color: red;
- }
- #signSubmit{
-     margin-top: 10px;
- }
- #signup+h3{
-     margin-top: 25px;
- } */
  body{
+    background-color: #f19aba;
+ }
+ #bodydiv{
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -58,7 +13,7 @@
      width: 350px;
      /* background-color: black; */
      margin: auto;
-     margin-top: 110px;
+     margin-top: 50px;
      font-family: Inter, Roboto, Arial, sans-serif;
      font-weight: 600;
      padding: 25px 15px;
@@ -96,6 +51,8 @@
  }
  #submit,#signSubmit{
     background-color: #f175a3;
+    margin: 10px;
+    padding-bottom: 7px;
  }
  #alert{
      color: red;
@@ -114,3 +71,19 @@
  h3{
     color: rgb(67, 65, 65);
  }
+ nav{
+    margin: 15px 0px 30px 10px;
+    background-color: #f0eedb;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+a{
+    position: relative;
+    padding: 5px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color:#fff;
+    background: #111;
+}

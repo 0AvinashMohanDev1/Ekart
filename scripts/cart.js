@@ -4,7 +4,7 @@ let cart=document.getElementById('cart');
 let bill=document.getElementById('pay');
 let coupan=document.getElementById('masai20');
 let couponBtn=document.getElementById('coupan');
-
+let totalQuantity=document.getElementById('totalQuantity');
 display(data[num].userCartData);
 
 function display(value){
@@ -23,7 +23,7 @@ function display(value){
         // location.reload();
         bill.innerText=totalCartValue;
     })
-    
+    totalQuantity.innerText=value.length;
     bill.innerText=totalCartValue;
     // console.log(totalCartValue,value.length);
    cart.innerHTML=null;

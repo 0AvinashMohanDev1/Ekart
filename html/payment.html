@@ -120,25 +120,21 @@
       <div class="content shadow-sm bg-body" id="totalprice">
         <div class="price-cont bg-body">
           <div class="subtotal mt-3">
-            <div>MRP Total : <span></span></div>
+            <div>MRP Total : <span id="span"></span></div>
             
             <div id="subt"></div>
             <hr>
           </div>
           <div class="shc mt-3">
-            <div>Product Discount</div>
+            <div>Product Discount:20%</div>
             
           </div>
           <hr>
           <div class="ds mt-3">
-            <div class="deta"><b>Total Amount</b></div>
+            <div class="deta"><b>Total Amount: <span id="amount"></span></b></div>
             
           </div>
           <hr>
-
-          
-          
-
 
 
         </div>
@@ -155,8 +151,6 @@
 
 </div>
 
-
-    
     
         </div>
       </div>
@@ -166,16 +160,38 @@
   </body>
 
  <script>
+  let data=JSON.parse(localStorage.getItem('webUserData'))||[];
+  let num=data[0].userNumberID;
+  let span=document.getElementById('span');
+  let amount=document.getElementById('amount');
+  let totalCartValue=0;
+  bill(data[num].userCartData)
+  function bill(value){
+    for(let i=0;i<value.length;i++){
+        totalCartValue+=(value[i].quantity)*(value[i].price);
+        console.log(value[i]);
+    }
+    console.log(value);
+  }
+  // 
+  // totalCartValue-=totalCartValue;
+  span.innerText=totalCartValue;
+  totalCartValue-=totalCartValue*(.20)
+  amount.innerText=totalCartValue;
   let btn=document.querySelector("#final_payment_text")
   btn.addEventListener("click",()=>{
 let class1=document.querySelector("#cardnumber").value;
 let class2=document.querySelector("#month").value;
 let class3=document.querySelector("#year").value;
 let class4=document.querySelector("#cvv").value;
+
 if(class1==""||class2==""||class3==""||class4==""){
   alert("Fill All The Cridencial")
 }else{
   window.location.href="order.html"
+  data[0].userNumberID=-1;
+  localStorage.setItem('webUserData',JSON.stringify(data));
+  span.innerText='No amount is here';
 }
 
   })
