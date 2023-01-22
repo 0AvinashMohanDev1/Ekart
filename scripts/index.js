@@ -12,7 +12,7 @@ let arr = ['https://images-static.nykaa.com/uploads/cf96cee1-979c-4f29-bc44-ae4d
             slider.innerHTML=`
             <img src=${image} alt="Banner-Nykaa" >
             `
-            console.log(i)
+            // console.log(i)
             i++;
             if(i==arr.length){
                 i=0;
