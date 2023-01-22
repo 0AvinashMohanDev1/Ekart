@@ -117,3 +117,55 @@
         cursor: pointer;
     }
 }
+
+/* // */
+body {
+    background-color: #F3F3F3;
+}
+
+.MyProfile-Container{
+    width: 50%;
+    margin: auto;
+    display: grid;
+    /* grid-template-columns: 26% 72%; */
+    grid-gap: 2%;
+    margin-bottom: 1rem;
+    height: 150px;
+}
+.Myprofile-navdiv{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 17.6rem;
+}
+
+
+.MYWISH-CONT{
+    background-color: #fff;
+    padding-bottom: 1rem;
+}
+
+.mywish-text{
+    padding: 1rem 1.5rem;
+    font-size: 22px;
+    border-bottom: 1px solid lightgray;
+}
+.prod-count{
+    color: #fc2779;
+}.MYWISH-BOX{
+    margin-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}#newbutton{
+    background-color: #fc2779;
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    margin-left: 225px;
+    color: white;
+    cursor: pointer;
+}
+.MYWISH-BOX p{
+    margin: 5px 0px;
+}
