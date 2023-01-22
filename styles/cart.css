@@ -7,7 +7,7 @@
     /* border: 5px solid green; */
     border-radius: 50px;
 }
-#card{
+/* #card{
     width: 80%;
     display: flex;
     grid-auto-columns: repeat(3,1fr);
@@ -16,4 +16,24 @@
     background-color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 20px;
+} */
+#addsubs{
+    /* display: flex; */
+}
+
+#nav{
+    margin: 15px 0px 30px 10px;
+    background-color: #f0eedb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    position: relative;
+    padding: 5px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color:#fff;
+    background: #111;
 }

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
+    <link rel="stylesheet" href="/styles/product.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
         #body {
@@ -22,19 +23,11 @@
             height: 100%;
             margin-right: 20px;
             justify-content: left;
-    position: sticky;
-     top: 0;
-     z-index: 3;  
+            position: sticky;
+            top: 0;
+            z-index: 3;  
         }
 
-        /* #sortPrice {
-            width: 100%;
-            height: 50px;
-            border: 2px solid black;
-            font-size: x-large;
-            background-color: rgb(247, 127, 153);
-            color: aliceblue;
-        } */
         .bar{
             width: 100%;
             height: 50px;
@@ -89,8 +82,64 @@
 </head>
 
 <body>
+    <!-- nav bar of product page -->
+    <nav class="navbar-1-2">
+        <nav class="navbar-1">
+            <div id="left">
+               <a href="index.html"><h4>BEAUTY BONANZA Get Your Daily Dose Of Amazing Deals</h4></a> 
+            </div>
+            <div id="right">
+                <button id="Getapp-btn"><i class="fa-solid fa-mobile-screen-button"></i> Get App</button> |
+                <button id="Stores"><i class="fa-sharp fa-solid fa-location-dot"></i> Stores & Events</button> |
+                <button><i class="fa-solid fa-gift"></i> Gift Card</button> |
+                <button><i class="fa-solid fa-question"></i> Help</button>
+            </div>
+        </nav>
+    
+        <nav class="navbar-2">
+            <div id="left1">
+                <div>
+                    <a href=""><img src="https://bl-i.thgim.com/public/incoming/t8zkyh/article65347390.ece/alternates/FREE_1200/Nykaa.png" alt="NYKAA Logo"></a>
+                </div>
+                <div><a href="">Categories</a></div>
+                <div><a href="">Brands</a></div>
+                <div><a href="">Luke</a></div>
+                <div><a href="">Nyka Fashion</a></div>
+                <div><a href="">Beauty Advice</a></div>
+            </div>
+            <div id="right1">
+            <form id="search" action="">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="text" placeholder="Search on Nykaa">
+            </form>
+            <a href="/html/login.html"><button id="Signin-btn">Sign in</button></a>
+            <div id="bag"><a href="/html/cart.html"><i class="fa-solid fa-bag-shopping"></i></a></div>
+            
+            </div>
+            <a href="./index.html">home🏡</a>
+            <a href="/html/profile.html">🦁</a>
+        </nav>
+    </nav>
+        <nav class="navbar-3">
+            <div>
+                <div><a href="./product.html">Makeup</a></div>
+                <div><a href="./product.html">Skin</a></div>
+                <div><a href="./product.html">Hair</a></div>
+                <div><a href="./product.html">Appliances</a></div>
+                <div><a href="./product.html">Bath&Body</a></div>
+                <div><a href="./product.html">Natural</a></div>
+                <div><a href="./product.html">Mom&Baby</a></div>
+                <div><a href="./product.html">Health</a></div>
+                <div><a href="./product.html">Men</a></div>
+                <div><a href="./product.html">Fragrance</a></div>
+                <div><a href="">Pop Ups</a></div>
+                <div><a href="">SALE</a></div>
+            </div>
+            
+        </nav>
+    <!-- body of product page -->
     <div id="body">
-        <div id="list">
+         <div id="list">
             <select id="sortPrice" class="bar">
                 <option value=""> Price</option>
                 <option value="asc">Ascending</option>
@@ -134,6 +183,112 @@
 
         </div>
     </div>
+    
+    <!-- footer of product Page -->
+    <div class="Footer-1">
+        <div class="Footer-1-1">
+            <div>
+                <i class="fa-solid fa-envelope"></i>  Get special discount on your inbox
+                <br><br>
+                <form id="Send-Email" action="">
+                    <input type="text" placeholder="Your Email">
+                    <button type="submit">Send</i></button>
+                </form>
+            </div>
+            <div>
+                <i class="fa-solid fa-mobile-screen-button"></i> EXPERIENCE THE NYKAA MOBILE APP
+            </div>
+            <div>
+                <i class="fa-solid fa-phone"></i> FOR ANY HELP, YOU MAY CALL US AT
+                <br> 1800-267-4444
+                <br><br>
+                (Monday to Saturday, 8AM to 10PM and Sunday, 10AM to 7PM)
+            </div>
+        </div>
+    </div>
+    <div class="Footer-2">
+       <div class="Footer-2-1">
+        <div>
+            <img src="https://bl-i.thgim.com/public/incoming/t8zkyh/article65347390.ece/alternates/FREE_1200/Nykaa.png" alt="">
+           <p>Who are we?</p> 
+           <p>Careers</p> 
+           <p>Authenticity</p> 
+           <p>Press</p> 
+           <p>Testimonials</p> 
+           <p>Nykaa CSR</p> 
+           <p>Responsible Disclosure</p> 
+           <p>Investor Relations</p> 
+        </div>
+        <div>
+            <h5>Help</h5>
+            <p>Contact Us</p>
+            <p>Frequently asked questions</p>
+            <p>Store Locator</p>
+            <p>Cancellation & Return</p>
+            <p>Shipping & Delivery</p>
+            <p>Sell on Nykaa</p>
+        </div>
+        <div>
+            <h5>Inspire Me</h5>
+            <p>Beauty Book</p>
+            <p>Nykaa TV</p>
+            <p>Nykaa Network</p>
+            <p>Buying Guides</p>
+        </div>
+        <div>
+            <h5>Quick Links</h5>
+            <p>Offer Zone</p>
+            <p>Nykaa Man</p>
+            <p>Nykaa Fashion</p>
+            <p>Buying Guides</p>
+            <p>Nykaa Pro</p>
+        </div>
+        <div>
+            <h5>Top Categories</h5>
+            <p>Makeup</p>
+            <p>Skin</p>
+            <p>Hair</p>
+            <p>Bath & Body</p>
+            <p>Appliances</p>
+            <p>Mom and Baby</p>
+            <p>Wellness</p>
+            <p>Fragrance</p>
+            <p>Natural</p>
+            <p>Luxe</p>
+        </div>
+      </div> 
+    </div>
+
+    <div class="Footer-3">
+        <div class="Footer-3-1">
+            <div class="Footer-3-cards flex">
+                <div><img src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Free-shipping.svg" alt=""></div>
+                <div><h5>FREE SHIPPING</h5><p>On Orders Above <br> ₹299</p></div>
+            </div>
+            <div class="Footer-3-cards flex">
+                <div><img src="https://adn-static2.nykaa.com/media/wysiwyg/2021/return_accepted.svg" alt=""></div>
+                <div><h5>EASY RETURNS</h5><p>15-Day Return Policy</p></div>
+            </div>
+            <div class="Footer-3-cards flex">
+                <div><img src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Authenticity.svg" alt=""></div>
+                <div><h5>100% AUTHENTIC</h5><p>Products Sourced <br> Directly</p></div>
+            </div>
+            <div class="Footer-3-cards flex">
+                <div><img src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Brands.svg" alt=""></div>
+                <div><h5>1900+ BRANDS</h5><p>1.2 Lakh+ Products</p></div>
+            </div>
+            <div>
+                <div><h5>show us some love ❤ on social media</h5></div>
+                <div class="social-media">
+                    <div><a href="https://www.instagram.com/mynykaa/?ref=badge"><img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-instagram-filled.svg" alt=""></a></div>
+                    <div><a href="https://www.facebook.com/MyNykaa"><img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-facebook-filled.svg" alt=""></a></div>
+                    <div><a href="https://www.youtube.com/channel/UCoaH2UtB1PsV7av17woV1BA"><img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-youtube-filled.svg" alt=""></a></div>
+                    <div><a href="https://twitter.com/MyNykaa"><img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-twitter-filled.svg" alt=""></a></div>
+                    <div><a href="https://www.pinterest.com/mynykaa/"><img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-pinterest-filled.svg" alt=""></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script>
     let arr;
@@ -165,9 +320,8 @@
 
             // change is here
             details.innerText = element.details.substring(0,75);
-            // let bus= src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg"
 
-            details.innerText = element.details;
+            details.innerText = element.details.substring(0,75);
 
 
             let addToCard = document.createElement("button")
@@ -195,8 +349,11 @@
                 }
 
             })
+            let gotocart=document.createElement('a');
+            gotocart.innerText='go to cart';
+            gotocart.href='./cart.html';
 
-            div.append(img, name, price,rating, details, addToCard);
+            div.append(img, name, price,rating, details, addToCard,gotocart);
             document.querySelector("#products").append(div);
         });
     }
@@ -240,7 +397,7 @@
     }
 })
 
-//cosmetic
+
 let cosmetic=  document.querySelector("#Cosmetic");
   cosmetic.addEventListener("change",()=>{
     let value =document.querySelector("#Cosmetic").value;
@@ -262,28 +419,6 @@ let cosmetic=  document.querySelector("#Cosmetic");
 
 
 
-
-//     document.querySelector("#Rating").addEventListener("change",()=>{
-//     let value =document.querySelector("#Rating").value;
-//     //console.log(value);
-//     arr = JSON.parse(localStorage.getItem("card"));
-//    if(value === "low"){
-//         arr=arr.filter(element =>{
-//             if(+(element.rating)<=5){
-//                 hotDisplay(arr);
-//             }
-//         });
-      
-//     }
-//    else if(value === "high"){
-//         arr=arr.filter(element => element.rating==="8");
-//         hotDisplay(arr);
-//     }
-//     else{
-//        // arr = JSON.parse(localStorage.getItem("registerdData"));
-//        hotDisplay(arr);
-//     }
-// })
 </script>
 
 </html>
