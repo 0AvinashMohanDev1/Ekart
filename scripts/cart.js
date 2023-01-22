@@ -25,7 +25,6 @@ function display(value){
     })
     totalQuantity.innerText=value.length;
     bill.innerText=totalCartValue;
-    // console.log(totalCartValue,value.length);
    cart.innerHTML=null;
    value.forEach((element,index) => {
     let card=document.createElement('div');
@@ -40,18 +39,26 @@ function display(value){
     let price=document.createElement('h3');
     price.innerText=element.price;
 
-    let rating=document.createElement('p');
-    rating.innerText=element.rating;
+    let rating=document.createElement('h3');
+    rating.innerText=element.ratings+' ⭐';
 
     let details=document.createElement('p');
-    details.innerText=element.details;
+    details.innerText=element.details.substring(0,50);
 
-    let add=document.createElement('h2');
-    add.innerText='+';
-    let quantity=document.createElement('p');
+    let add=document.createElement('h3');
+    add.setAttribute('class','add');
+    add.style.backgroundColor='#cecbb1'
+    add.innerText='➕';
+
+    let quantity=document.createElement('h2');
+    quantity.setAttribute('class','add');
+    // quantity.style.backgroundColor='#c6c4b0'
     quantity.innerText=element.quantity;
-    let subs=document.createElement('h2');;
-    subs.innerText='-';
+    
+    let subs=document.createElement('h3');;
+    subs.setAttribute('class','add');
+    subs.style.backgroundColor='#cecbb1'
+    subs.innerText='➖';
 
     add.addEventListener('click',()=>{
        element.quantity++;
@@ -76,10 +83,13 @@ function display(value){
     let addDiv=document.createElement('dive');
     addDiv.setAttribute('id','addsubs');
 
-    addDiv.append(add,quantity,subs);
+    addDiv.append(subs,quantity,add);
 
     let remove=document.createElement('button');
     remove.innerText='Remove';
+    remove.setAttribute('id','remove');
+    remove.style.borderWidth='5px';
+    remove.style.borderColor='#cecbb1'
     remove.addEventListener('click',()=>{
         value.splice(index,1);
         data[num].userCartData=value;

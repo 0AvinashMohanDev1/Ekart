@@ -3,8 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
-    background-color: #fff1;
-    /* background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/ca623e133073675.61b61c12125e5.png); */
 }
 nav{
     margin: 15px 0px 30px 10px;
@@ -16,26 +14,17 @@ nav{
 .container{
     width: 400px;
     height: 600px;
-    background-color: blue;
+    background-color: rgb(178, 178, 230);
 }
 .content{
     margin: 20px ;
 }
-/* .container{
-    position: relative;
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff173;
-     transition: 0.5s;
-    padding: 20px;
-} */
+
 #blur{
     width: 400px;
     padding: 25px;
-    background-color: aqua;
+    background-color: rgb(181, 236, 236);
+    border-width: 10px;
 }
  /* bluring background */
 .container#blur.active{
