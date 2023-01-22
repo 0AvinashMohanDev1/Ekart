@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+#Container{
+    width: 100%;
+    background-color: #C7C0F0;
+    /* border: 5px solid green; */
+    border-radius: 50px;
+}
+#card{
+    width: 80%;
+    display: flex;
+    grid-auto-columns: repeat(3,1fr);
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
+}

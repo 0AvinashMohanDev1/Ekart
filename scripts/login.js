@@ -1,5 +1,7 @@
 let userData=JSON.parse(localStorage.getItem("webUserData"))||[];
-
+// userData=[];
+// userData.unshift({userNumberID:-1});
+// localStorage.setItem("webUserData",JSON.stringify(userData));
 let loginForm=document.getElementById('loginForm');
 let signupForm=document.getElementById('signupForm');
 let printError=document.getElementById('alert');
@@ -85,22 +87,22 @@ signupForm.addEventListener("submit",(e)=>{
     }
     if(signupResult){
         userData[0].userProfileNumber=userNumberID;
-        if(userData[userData[0].userNumberID].id==='admin0@gmail.com'){
+        if(userData[userData[0].userNumberID].id==='admin@gmail.com'){
             alert(`welcome back admin!`);
             window.location.href='/admin/admin.html'
         }else{
             alert(`Welcome back ${userData[userData[0].userNumberID].userPersonalData.name}`);
             window.location.href='./profile.html';
         }
-        
+        console.log(userData);
     }else{
         alert('wrong input')
         
     }
 })
 console.log(userData);
-console.log(userData[0].userNumberID);
-let strongPassword=(num)=>{
+// console.log(userData[0].userNumberID);
+function strongPassword(num){
     num=num.trim().split("");
     let size=[];
     size.push(...num);

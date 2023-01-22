@@ -8,9 +8,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="/styles/login.css">
 </head>
-<body>   
+<!-- <body>   
     <div id="login">
-        <h3>sign up</h3>
+        <h3>SIGN UP</h3>
         <h5 id="alert"></h5>
         <form action="form" id="loginForm">
             <label for="name">Name:</label><br>
@@ -33,7 +33,7 @@
         </form>
     </div>
     <div id="signup">
-        <h3>log in</h3>
+        <h3>LOG IN</h3>
         <form action="form" id="signupForm">
             <label for="email">e-mail:</label><br>
             <input type="email" name="signUpEmail" id="signUpEmail"><br>
@@ -41,6 +41,43 @@
             <input type="password" name="signUpPassword" id="signUpPassword"><br>
             <input type="submit" value="submit" id="signSubmit"><br>
         </form>
+    </div>
+</body> -->
+<body>
+    <div id="login">
+        <h3>SIGN UP</h3>
+        <h5 id="alert"></h5>
+        <form action="form" id="loginForm">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name"><br>
+            <label for="email">E-mail:</label><br>
+            <input type="email" name="e-mail" id="email"><br>
+            <label for="passsword">Passsword:</label><br>
+            <input type="password" name="passsword" id="password"><br>
+            <label for="Phone No">phone no:</label><br>
+            <input type="number" name="phoneNumber" id="phoneNumber"><br>
+            <label for="age">age:</label><br>
+            <input type="number" name="age" id="age"><br>
+            <label for="gender">Gender:</label><br>
+            <select name="gender" id="gender">
+                <option value="">Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br>
+            <input type="submit" id="submit" value="submit"><br>
+        </form>
+        <div id="Bottom-text"><p>Need a Account? SIGN UP</p></div>
+    </div>
+    <div id="signup">
+        <h3>LOG IN</h3>
+        <form action="form" id="signupForm">
+            <label for="email">E-mail:</label><br>
+            <input type="email" name="signUpEmail" id="signUpEmail"><br>
+            <label for="password">Passsword</label><br>
+            <input type="password" name="signUpPassword" id="signUpPassword"><br>
+            <input type="submit" value="Login" id="signSubmit"><br>
+        </form>
+        <div id="Bottom-text"><p>Already a User? LOGIN</p></div>
     </div>
 </body>
 </html>
