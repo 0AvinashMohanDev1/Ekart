@@ -68,3 +68,4 @@ Our products can also be edited based on the requirements and it can be done by 
 After all the operations if the admin wants to logout, admin can click on the logout button in navbar and admin will be redirected to the main landing page of out website
 
 <img width="955" alt="landing1" src="https://user-images.githubusercontent.com/76575824/214015969-7c6a49ac-6994-4a99-b137-e95b363085d9.png">
+Admin Page: [https://ekart-ayta.vercel.app/admin/admin.html]
